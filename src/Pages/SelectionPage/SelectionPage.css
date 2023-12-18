@@ -1,0 +1,106 @@
+.SelectionAlign {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SelectionSec {
+    height: 80vh;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.SelectionButtonSec {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ed145c8b;
+    border-radius: 17px;
+}
+
+.SelectionButtonField2 {
+    height: 100%;
+    width: 200px;
+    background-color: transparent;
+    border-radius: 17px;
+    border: none;
+    color: #ed145ce8;
+}
+
+.SelectionButtonField {
+    height: 100%;
+    width: 200px;
+    background-color: #ed145c;
+    border-radius: 17px;
+    border: none;
+    color: white;
+    animation: beatingHeart 2s infinite;
+}
+
+
+
+.SelectionButtonField {
+    background-color: #ed145c;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .SelectionButtonField2 {
+    background-color: #fff;
+    color: #ed145c;
+    transition: background-color 0.3s ease;
+  }
+  
+  .SelectionButtonField:hover {
+    background-color: #ed145c;
+  }
+  
+  .SelectionButtonField2:hover {
+    background-color: #ecf0f1;
+  }
+  
+  .NextButton {
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+
+@keyframes beatingHeart {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.05);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}

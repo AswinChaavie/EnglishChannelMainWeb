@@ -1,0 +1,56 @@
+.StudentsLove {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+
+.StudentsLoveSec {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.StudentsLoveSec2 {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.video-wrapper {
+    height: 70%;
+    width: 90%;
+}
+
+.StudentsLoveSecYoutube {
+    border-radius: 15px;
+}
+
+.StudentsLoveText {
+    color: rgb(5, 5, 5);
+    font-size: 35px;
+    height: 30px;
+    font-weight: 600;
+}
+
+.StudentsLoveText2 {
+    color: #ED145C;
+    font-size: 35px;
+    height: 30px;
+    font-weight: 600;
+}
+
+.StudentsLoveFinal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.StudentsLoveText3 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.831);
+}

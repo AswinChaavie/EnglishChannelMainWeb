@@ -1,0 +1,110 @@
+.AdmissionAlign {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    justify-content: space-around;
+    gap: 60px;
+}
+
+.AdmissionTextField {
+    font-size: 35px;
+    color: #ED145C;
+    text-align: center;
+}
+
+.AdmissionCardSec1 {
+    width: 50%;
+    height: 90%;
+    background-image:
+        linear-gradient(to bottom, rgba(17, 17, 18, 0.627), rgba(0, 0, 0, 0.742)),
+        url("../../../public/Images/2808170_18433.jpg");
+    object-fit: cover;
+    background-size: cover;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.AdmissionCardSec2 {
+    width: 50%;
+    height: 90%;
+    background-image:
+        linear-gradient(to bottom, rgba(17, 17, 18, 0.627), rgba(0, 0, 0, 0.742)),
+        url("../../../public/Images/group-students-celebrating-graduation-together-wearing-face-masks.jpg");
+    object-fit: cover;
+    background-size: cover;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.AdmissionInnerCard1 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 90%;
+    align-items: center;
+}
+
+.AdmissionInnerCard2 {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    height: 90%;
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+.AdmissionImg {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.AdmissionCardFront {
+    position: absolute;
+    z-index: 9999;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.AdmissionCardFrontText {
+    font-size: 20px;
+    color: #ED145C;
+    height: 15px;
+}
+
+#AdmissionCardFrontArrow {
+    font-size: 30px;
+    color: #ED145C;
+}
+
+.AdmissionCardFrontLi {
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.818);
+    text-align: start;
+    line-height: 35px;
+}
+
+.AdmissionCardFrontText {
+    color: #ED145C;
+    font-size: 29px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.AdmissionCardSecmyCard {
+    width: 100%;
+    display: flex;
+}
+
+.frontSide {
+    height: 50%;
+}

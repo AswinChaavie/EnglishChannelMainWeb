@@ -1,0 +1,21 @@
+@media screen and (max-width: 1000px) {
+  .Home_font1 {
+      font-size: 25px;
+  }
+
+  .Home_lastText {
+      font-size: 13px;
+  }
+
+  .Home_fontBtalignS {
+      gap: 0;
+  }
+
+  .CounterText {
+      font-size: 10px;
+
+  }
+  .AboutUsSecsetImg{
+    height: 300px;
+  }
+}

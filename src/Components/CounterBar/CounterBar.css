@@ -1,0 +1,40 @@
+.CounterBarSett {
+    height: 90px;
+    width: 80%;
+    background-color: #2B2B2B;
+    border-radius: 20px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.CounterCntntSetting {
+    width: 230px;
+}
+
+.CounterText {
+    font-size: 25px;
+    color: #ED145C;
+    height: 15px;
+    text-align: center;
+
+}
+
+.CounterTextNm2 {
+    font-size: 19px;
+    color: #FFFFFF;
+    height: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    .CounterText {
+        font-size: 16px;
+    }
+
+    .CounterTextNm2 {
+        font-size: 13px;
+    }
+}

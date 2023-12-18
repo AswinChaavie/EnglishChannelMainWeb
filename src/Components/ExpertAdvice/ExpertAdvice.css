@@ -1,0 +1,43 @@
+.ExpertAdviceAdjst {
+    height: 150px;
+    width: 60%;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.ExpertAdviceText {
+    color: rgba(255, 255, 255, 0.762);
+    font-size: 20px;
+}
+
+.ExpertAdviceSec1 {
+    width: 50%;
+}
+
+.ExpertAdviceButton {
+    height: 35px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0.77);
+    background-color: #ED145C;
+    letter-spacing: 2px;
+    border-radius: 6px;
+}
+
+.ExpertAdviceAdjstImg {
+    height: 80px;
+    margin: -200px 00px;
+}
+
+.ExpertAdviceAdjstFinal {
+    display: flex;
+    width: 100%;
+
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    .ExpertAdviceText {
+        font-size: 15px;
+    }
+}

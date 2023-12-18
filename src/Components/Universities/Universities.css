@@ -1,0 +1,30 @@
+.UniversitiesAlignSec {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 70px;
+}
+
+.UniversitiesAlign {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.UniversitiesMainText {
+    color:#ED145C;
+    font-size: 35px;
+    text-align: center;
+    height: 200px;
+
+}
+
+.UniversitiesImg {
+    height: 450px;
+    border-radius: 20px;
+
+}

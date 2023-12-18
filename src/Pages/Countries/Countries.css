@@ -1,0 +1,111 @@
+.CountriesAlign {
+    width: 100%;
+}
+
+.CountriesAlignText {
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    height: 100px;
+}
+
+.CountriesAlignDivAlign {
+    display: flex;
+    width: 100%;
+
+}
+
+.CountriesAlignDivSec {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.CountriesAlign2DivSec {
+    width: 80%;
+    padding: 20px 40px;
+}
+
+.CountriesAlignDivImg {
+    height: 100%;
+    width: 100%;
+}
+
+.CountriesAlign2DivText {
+    font-size: 20px;
+    color: rgb(63, 63, 63);
+}
+
+.CountriesAlign2DivText2 {
+    font-size: 30px;
+    color: #ED145C;
+    font-weight: bold;
+}
+
+.CountriesAlign2DivFact {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    height: 170px;
+
+}
+
+.CountriesAlign2DivInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.CountriesAlign2DivRnd {
+    background-color: #ED145C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#CountriesICon {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 30px;
+
+}
+
+.Countries2DivText {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.661);
+    font-weight: bold;
+    height: 10px;
+
+}
+
+.Countries2DivText2 {
+    font-size: 13px;
+    color: black;
+
+}
+/* ImageWithGradient.css */
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .gradient-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
+  

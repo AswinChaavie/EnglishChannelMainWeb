@@ -1,0 +1,42 @@
+.CoursesAlign {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.CoursesAlignSec {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.CoursesAlignSecImg {
+    height: 400px;
+}
+
+.TCoursesAlignText {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+}
+
+.CoursesAlignTextSec {
+    width: 100%;
+}
+
+.CoursesSectionAlign {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .CoursesAlignSecImg {
+        height: 300px;
+    }
+    .swiperCoursesText{
+        font-size: 14px;
+    }
+}

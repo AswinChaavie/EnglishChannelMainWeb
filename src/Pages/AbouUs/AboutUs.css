@@ -1,0 +1,142 @@
+.AboutUsAlign {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.AboutSecAlign {
+    display: flex;
+    width: 100%;
+}
+
+.AboutUsSecset {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.AboutUsSecsetImg {
+    height: 60%;
+}
+
+.AboutUsSecsetCoughtsSec {
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: #f73375;
+    margin: 00px 80px;
+}
+
+.AboutUsSecsetBoxAlign {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.AboutUsInnerSec {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    height: 50px;
+}
+
+.AboutUsInnerSein {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.AboutUsInnerCoughtFont2 {
+    font-size: 13px;
+    text-align: end;
+}
+
+.AboutUsInnerCoughtFont {
+    font-size: 13px;
+}
+
+.AboutUsSecondCoughtFont {
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+}
+
+.AboutUsInnerSecond_sec {
+    color: black;
+    font-size: 20px;
+}
+
+.AboutUsSecsetCoughtsSec {
+    transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.AboutUsSecsetCoughtsSec:hover {
+    transform: scale(1.1);
+}
+
+.AboutUsAlignLetsButton {
+    width: 200px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f73375;
+    height: 40px;
+    color: rgb(245, 242, 242);
+    letter-spacing: 2px;
+}
+
+.AboutUsAlignLets {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.AboutUsLastContent {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+#AboutUsLastIcon {
+    color: #f73375;
+    font-size: 30px;
+}
+
+.AboutUsInnerSecond_secFont {
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    height: 20px;
+}
+
+.AboutUsLastFlexAlgn {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .AboutUsSecsetImg {
+        height: 15rem;
+    }
+
+    .AboutUsInnerCoughtFont {
+        font-size: 13px;
+    }
+}

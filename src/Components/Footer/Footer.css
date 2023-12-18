@@ -1,0 +1,65 @@
+.FooterAlignment {
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+.FooterAlignmentSec {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.FooterAlignmentImgs {
+    height: 60px;
+    object-fit: cover;
+    width: 200px;
+}
+
+.FooterAlignmentIText {
+    color: #ED145C;
+    font-size: 20px;
+    height: 20px;
+}
+
+.FooterAlignmentIText2 {
+    color: rgba(255, 255, 255, 0.673);
+    font-size: 17px;
+    width: 300px;
+    line-height: 40px;
+}
+
+.FooterAlignmentIText3 {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.618);
+}
+
+.FooterAlignmentSec2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.FooterAlignmentSec3 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.FooterAlignSec3Social {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+#FooterAlignSec3SocialIcon {
+    font-size: 30px;
+    color: #ED145C;
+    border-radius: 50%;
+}
+@media screen and (max-width: 1000px) {
+    .FooterAlignSec3Social{
+        gap: 10px;
+    }
+}

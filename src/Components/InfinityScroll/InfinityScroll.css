@@ -1,0 +1,70 @@
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+
+.InfinityScrollAligneset {
+    height: 55vh;
+    width: 100%;
+}
+
+.InfinityScrollImg {
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to bottom, rgba(17, 17, 18, 0.627), rgba(0, 0, 0, 0.742)),
+        url("../../../public/Images//toronto-sunrise.jpg");
+    object-fit: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.InfinityScrollText {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.InfinityScrollText2 {
+    font-size: 17px;
+    text-align: center;
+    width: 40%;
+}
+
+.InfinityScrollSlide {
+    height: 100px;
+}
+
+.InfinityScrollSlideImg {
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+}
+.InfinityScrollSwiper{
+    height: 200px;
+    width: 100%;
+}
+.InfinityScrollSlideAdjst{
+    width: 200px;
+    height: 100px;
+}
+.InfinityScrollswiperslide{
+    height: 100px;
+    width: 100px;
+    
+}

@@ -1,0 +1,74 @@
+.CalculatorAlign {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+
+}
+
+.CalculatorAlignSec {
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.CalculatorAlignSec2 {
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #ED145C;
+    flex-direction: column;
+}
+
+.CalculatorAlignSec2Text {
+    color: black;
+    font-size: 17px;
+    height: 20px;
+}
+
+.CalculatorInput {
+    height: 40px;
+    border: 1px solid #ED145C;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.CalculatorAlignSec2DivAdj {
+    height: 100px;
+}
+
+.CalculatorFlex {
+    width: 100%;
+    display: flex;
+
+}
+
+.CalculatorFlexBtn {
+    height: 40px;
+    background-color: #ED145C;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.CalculatorFleText {
+    color: black;
+}
+
+.CalculatorFleTextDiv {
+    margin-left: auto;
+}
+
+.CalculatorFleText {
+    text-align: center;
+}
+
+.CalculatorAlignSecM {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.CalculatorAlignSecCo{
+    font-size: 16px;
+    color: black;
+}
