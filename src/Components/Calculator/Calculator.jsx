@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Calculator.css"
 import { InputField } from "../MainComponents/InputField"
 import { TextField } from '../MainComponents/TextField'
@@ -8,13 +8,35 @@ import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom'
 export const Calculator = () => {
     const location = useLocation();
-
+    const [calculatordata, setcalculatordata] = useState({})
+    const [total, settotal] = useState(0)
     useEffect(() => {
         AOS.init({
             once: false,
         });
         AOS.refresh();
     }, [location.pathname]);
+
+    const InputOnchange = (e) => {
+        setcalculatordata((prevData) => {
+            return { ...prevData, [e.target.name]: parseInt(e.target.value) };
+        });
+        settotal(0)
+    }
+    const calculate = async () => {
+        try {
+            let total = ""
+            total = await calculatordata.tuition - calculatordata.scholarship
+            total -= await calculatordata.deposit
+            total += await calculatordata.location
+            if (total > 0) {
+                await settotal(total)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
     return (
         <>
             <div className='CalculatorAlign'>
@@ -35,30 +57,32 @@ export const Calculator = () => {
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine" className='CalculatorAlignSec2 p-4'>
                     <div className='CalculatorAlignSec2DivAdj'>
-                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Total Tuition Fee" }} />
-                        <InputField data={{ type: "number", style: "CalculatorInput" }} />
+                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Tuition fee" }} />
+                        <InputField data={{ type: "number", style: "CalculatorInput", name: "tuition", InputOnchange }} />
                     </div>
                     <div className='CalculatorAlignSec2DivAdj'>
-                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Tuition Deposit Paid" }} />
-                        <InputField data={{ type: "number", style: "CalculatorInput" }} />
+                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Scholarship Awarded" }} />
+                        <InputField data={{ type: "number", style: "CalculatorInput", name: "scholarship", InputOnchange }} />
                     </div>
                     <div className='CalculatorAlignSec2DivAdj'>
-                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "No. Dependent(s)" }} />
-                        <InputField data={{ type: "number", style: "CalculatorInput" }} />
+                        <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Deposit Paid" }} />
+                        <InputField data={{ type: "number", style: "CalculatorInput", name: "deposit", InputOnchange }} />
                     </div>
                     <div className='CalculatorAlignSec2DivAdj'>
                         <TextField data={{
                             style: "CalculatorAlignSec2Text", Text: "School Location"
                         }} />
-                        <select className='CalculatorInput' name="" id="">
-                            <option value="">-Select Location-</option>
+                        <select onChange={InputOnchange} className='CalculatorInput' name="location" id="">
+                            <option selected disabled value="">-Select Location-</option>
+                            <option value="12006">London</option>
+                            <option value="9207">others</option>
                         </select>
                     </div>
                     <div className='CalculatorFlex'>
-                        <ButtonField data={{ style: "CalculatorFlexBtn", text: "Convert to your currency" }} />
+                        <ButtonField data={{ style: "CalculatorFlexBtn", text: "Convert to your currency", Fn: calculate }} />
                         <div className='CalculatorFleTextDiv'>
                             <TextField data={{ style: "CalculatorFleText", Text: "PROOF OF FUND REQUIRED" }} />
-                            <TextField data={{ style: "CalculatorFleText", Text: "£" }} />
+                            <TextField data={{ style: "CalculatorFleText", Text: `£ ${total}` }} />
                         </div>
                     </div>
                 </div>

@@ -105,8 +105,8 @@ export const Admission = () => {
                         style: "AdmissionCardFrontText", Text: "Bachelors Level"
                     }} />
                     <ul>
-                        {BachelorsLevel.map(ele =>
-                            <li className='AdmissionCardFrontLi'>{ele}</li>
+                        {BachelorsLevel.map((ele, index) =>
+                            <li key={index} className='AdmissionCardFrontLi'>{ele}</li>
                         )}
                     </ul>
                 </div>
@@ -117,8 +117,8 @@ export const Admission = () => {
                         style: "AdmissionCardFrontText", Text: "Masters Level"
                     }} />
                     <ul>
-                        {mastersLevel.map(ele =>
-                            <li className='AdmissionCardFrontLi'>{ele}</li>
+                        {mastersLevel.map((ele, index) =>
+                            <li key={index} className='AdmissionCardFrontLi'>{ele}</li>
                         )}
                     </ul>
                 </div>

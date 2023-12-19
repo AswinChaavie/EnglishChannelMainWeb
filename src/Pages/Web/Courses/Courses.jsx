@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import "./Courses.css"
-import SwiperSliders from '../../Components/SwiperSlider/Swiper'
-import { ImageField } from '../../Components/MainComponents/ImageField'
-import { TextField } from '../../Components/MainComponents/TextField'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import SwiperSliders from '../../../Components/SwiperSlider/Swiper'
+import { ImageField } from '../../../Components/MainComponents/ImageField'
+import { TextField } from '../../../Components/MainComponents/TextField'
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom'
 export const Courses = () => {
     const location = useLocation();

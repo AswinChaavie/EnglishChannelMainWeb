@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const InputField = ({ data: { type, style, value, palaceholder } }) => {
+export const InputField = ({ data: { type, style, value, palaceholder, name, InputOnchange } }) => {
+
+
     return (
         <>
-            <input placeholder={palaceholder} className={style} type={type} name="" id="" />
+            <input onChange={InputOnchange} placeholder={palaceholder} className={style} type={type} name={name} value={value} id="" />
         </>
     )
 }

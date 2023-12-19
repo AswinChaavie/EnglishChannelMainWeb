@@ -1,2 +1,19 @@
 /* YourComponent.css */
 
+.responsiveMobile {
+    display: none;
+}
+
+.responsiveweb {
+    display: block;
+}
+
+    @media screen and (max-width: 699px) {
+        .responsiveWeb {
+            display: none;
+        }
+
+        .responsiveMobile {
+            display: block;
+        }
+    }

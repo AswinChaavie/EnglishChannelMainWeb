@@ -1,0 +1,44 @@
+.HomeMob_font1 {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.HomeMobImages {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.HomeMobImage1 {
+    height: 250px;
+}
+
+.HomeMobImage2 {
+    height: 70px;
+    object-fit: cover;
+}
+
+.HomeMobAdjstImg {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.HomeMobButtonDes {
+    border-radius: 6px;
+    color: white;
+    border: none;
+    background-color: #ED145C;
+    height: 40px;
+    width: 100%;
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+}
+
+.HomeMobileALign {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

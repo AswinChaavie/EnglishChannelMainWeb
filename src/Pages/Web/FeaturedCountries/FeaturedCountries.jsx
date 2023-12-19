@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./FeaturedCountries.css"
-import { TextField } from '../../Components/MainComponents/TextField'
-import SwiperSliders from '../../Components/SwiperSlider/Swiper'
+import { TextField } from '../../../Components/MainComponents/TextField'
+import SwiperSliders from '../../../Components/SwiperSlider/Swiper'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';

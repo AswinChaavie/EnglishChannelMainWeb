@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './StudentsLove.css'
 import ReactPlayer from 'react-player'
-import { TextField } from '../../Components/MainComponents/TextField'
+import { TextField } from '../../../Components/MainComponents/TextField'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';

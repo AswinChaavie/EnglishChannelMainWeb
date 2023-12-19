@@ -293,16 +293,38 @@
     justify-content: flex-start;
     flex-direction: column;
 }
-.swiperCoursesinnexBtn{
+
+.swiperCoursesinnexBtn {
     width: fit-content;
 }
+
+
+
 @media screen and (max-width: 1000px) {
-    .cta span{
+    .cta span {
         font-size: 14px;
     }
-    .cta:before{
+
+    .cta:before {
         height: 20px;
         width: 20px;
         margin: 6px 6px;
+    }
+
+    .swiperInnerBox {
+        width: 100%;
+    }
+    .swiperInnerBoxer{
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width: 699px) {
+   
+    .cta{
+        padding: 2px 13px;
+    }
+    .swiperPreNext{
+        justify-content: center;
     }
 }

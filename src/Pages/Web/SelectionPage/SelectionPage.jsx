@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import "./SelectionPage.css";
-import { ButtonField } from '../../Components/MainComponents/ButtonField';
-import { Admission } from '../../Components/AdmissionRequirement/Admission';
-import { Calculator } from '../../Components/Calculator/Calculator';
+import { ButtonField } from '../../../Components/MainComponents/ButtonField';
+import { Admission } from '../../../Components/AdmissionRequirement/Admission';
+import { Calculator } from '../../../Components/Calculator/Calculator';
 export const SelectionPage = () => {
     const ButtonData = ["Admission Requirements", "Expense Calculator", "Post Work Permit Opportunity", "High academic Standards"];
     const [ButtonFalse, setButtonFalse] = useState({
@@ -19,9 +19,9 @@ export const SelectionPage = () => {
             <div className="SelectionAlign p-5">
                 <div className="SelectionSec p-3">
                     <div className="SelectionButtonSec p-1">
-                        {ButtonData.map((ele) => (
+                        {ButtonData.map((ele, index) => (
                             <ButtonField
-                                key={ele}
+                                key={index}
                                 data={{
                                     style: ButtonFalse[ele] ? "SelectionButtonField" : "SelectionButtonField2",
                                     text: ele,

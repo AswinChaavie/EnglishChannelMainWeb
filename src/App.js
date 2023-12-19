@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LandingView } from './Pages/LandingView/LandingView';
-import { Countries } from './Pages/Countries/Countries';
+import { Countries } from './Pages/Web/Countries/Countries';
 function App() {
   return (
     <>

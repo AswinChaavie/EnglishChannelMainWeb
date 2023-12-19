@@ -1,0 +1,80 @@
+.TopCoursesAlign {
+    height: auto;
+    width: 100%;
+}
+
+.TopCourseText {
+    text-align: center;
+    font-size: 40px;
+    color: #ED145C;
+    letter-spacing: 2px;
+    height: 200px;
+}
+
+.TopCoursesTileAlign {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.TopCoursesTilesSet {
+    width: 300px;
+    height: 130px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.TopCoursesTileImg {
+    height: 100%;
+    width: 40%;
+}
+
+.TopCoursesTileImgCom {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.TopCoursesTileTextDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.TopCoursesTileText {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.gradient-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.131), rgba(0, 0, 0, 0.634));
+    border-radius: 6px;
+
+}

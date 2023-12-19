@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import "./AboutUs.css"
-import { ImageField } from '../../Components/MainComponents/ImageField'
-import { TextField } from '../../Components/MainComponents/TextField'
+import { ImageField } from '../../../Components/MainComponents/ImageField'
+import { TextField } from '../../../Components/MainComponents/TextField'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ButtonField } from '../../Components/MainComponents/ButtonField';
+import { ButtonField } from '../../../Components/MainComponents/ButtonField';
 import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 export const AboutUs = () => {
@@ -40,7 +40,6 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div className='AboutUsSecset p-3'>
                         <TextField data={{

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import "./Home.css"
-import { ButtonField } from '../../Components/MainComponents/ButtonField'
-import { ImageField } from '../../Components/MainComponents/ImageField'
-import { TextField } from '../../Components/MainComponents/TextField'
+import { ButtonField } from '../../../Components/MainComponents/ButtonField'
+import { ImageField } from '../../../Components/MainComponents/ImageField'
+import { TextField } from '../../../Components/MainComponents/TextField'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { CounterBar } from '../../Components/CounterBar/CounterBar'
+import { CounterBar } from '../../../Components/CounterBar/CounterBar'
 import { useLocation } from 'react-router-dom'
 export const Home = () => {
     const location = useLocation();

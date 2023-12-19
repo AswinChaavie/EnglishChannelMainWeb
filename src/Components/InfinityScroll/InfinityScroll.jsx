@@ -11,8 +11,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from "react-router-dom";
 export const InfinityScroll = () => {
-    const images = ["28aa18660423cdc66dbf93a8af21fd72.1043.webp", "6354ffbe7d4bce280dab3df59d19b08c.6.webp", "4c5db9f0b4a203668dbecbed5ddae456.493.webp", "8ce26599f197f7f29afbdb261ac18715.8.webp"
-        , "4266c552e6368ac021da9838b5f47c49.1-1.webp"
+    const images = [
+        "28aa18660423cdc66dbf93a8af21fd72.1043.webp",
+        "6354ffbe7d4bce280dab3df59d19b08c.6.webp",
+        "4c5db9f0b4a203668dbecbed5ddae456.493.webp",
+        "8ce26599f197f7f29afbdb261ac18715.8.webp",
+        "4266c552e6368ac021da9838b5f47c49.1-1.webp"
     ]
     const location = useLocation();
     useEffect(() => {
@@ -43,15 +47,14 @@ export const InfinityScroll = () => {
                                 disableOnInteraction: false,
                             }}
                         >
-                            {images.map(ele =>
-                                <div className="InfinityScrollSlideAdjst">
+                            {images?.map((ele, index) =>
+                                <div key={ele} className="InfinityScrollSlideAdjst">
                                     <SwiperSlide className="InfinityScrollswiperslide">
                                         <div className="InfinityScrollSlide">
                                             <ImageField data={{ ImgName: ele, style: "InfinityScrollSlideImg" }} />
                                         </div>
                                     </SwiperSlide>
                                 </div>
-
                             )
                             }
                         </Swiper>

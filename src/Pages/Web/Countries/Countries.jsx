@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
 import "./Countries.css"
-import Navbar from '../../Components/Navbar/Navbar'
-import { TextField } from '../../Components/MainComponents/TextField'
-import { ImageField } from '../../Components/MainComponents/ImageField'
-import { ButtonField } from '../../Components/MainComponents/ButtonField'
+import Navbar from '../../../Components/Navbar/Navbar'
+import { TextField } from '../../../Components/MainComponents/TextField'
+import { ImageField } from '../../../Components/MainComponents/ImageField'
+import { ButtonField } from '../../../Components/MainComponents/ButtonField'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom'
-import { InfinityScroll } from '../../Components/InfinityScroll/InfinityScroll'
+import { InfinityScroll } from '../../../Components/InfinityScroll/InfinityScroll'
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { SelectionPage } from '../SelectionPage/SelectionPage'
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import WorkIcon from '@mui/icons-material/Work';
-import { Footer } from '../../Components/Footer/Footer'
+import { Footer } from '../../../Components/Footer/Footer'
+import { TopCourses } from '../TopCourses/TopCourses'
 export const Countries = () => {
     const Temp = [
         {
@@ -66,8 +67,8 @@ export const Countries = () => {
                         <div data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine" className='CountriesAlign2DivFact'>
-                            {Temp.map(ele =>
-                                <div key={ele} className='CountriesAlign2DivInner'>
+                            {Temp.map((ele, index) =>
+                                <div key={index + 1} className='CountriesAlign2DivInner'>
                                     <div className='CountriesAlign2DivRnd'>
                                         {ele.icon}
                                     </div>
@@ -85,10 +86,8 @@ export const Countries = () => {
             <SelectionPage />
             {/* <Admission /> */}
             <InfinityScroll />
-            {/* <div className="image-container">
-                <img src="/Images/Rectangle 73.png" alt="Your Image" className="gradient-image" />
-                <div className="gradient-overlay"></div>
-            </div> */}
+           
+            <TopCourses />
             <Footer />
         </>
     )
