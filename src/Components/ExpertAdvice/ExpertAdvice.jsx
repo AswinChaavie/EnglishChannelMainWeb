@@ -18,9 +18,9 @@ export const ExpertAdvice = () => {
         <>
             <div data-aos="fade-down"
                 data-aos-easing="linear"
-                data-aos-duration="1500" className='ExpertAdviceAdjst p-4'>
+                data-aos-duration="1500" className='ExpertAdviceAdjst'>
                 <div className='ExpertAdviceAdjstFinal'>
-                    <div className='ExpertAdviceSec1'>
+                    <div className='ExpertAdviceSec'>
                         <TextField data={{
                             style: "ExpertAdviceText", Text: "Get our experts to answer your questions within 24 Hrs"
                         }} />
@@ -37,7 +37,9 @@ export const ExpertAdvice = () => {
                         <TextField data={{
                             style: "ExpertAdviceText", Text: "Need expert advice"
                         }} />
-                        <ButtonField data={{ style: "ExpertAdviceButton", text: "Get in Touch" }} />
+                        <div className='ExpertAdviceBTnDiv'>
+                            <ButtonField data={{ style: "ExpertAdviceButton", text: "Get in Touch" }} />
+                        </div>
                     </div>
                 </div>
 

@@ -10,7 +10,9 @@ import { StudentsLove } from '../Web/StudentsLove/StudentsLove'
 import { Footer } from '../../Components/Footer/Footer'
 import { HomeMobile } from '../Mobile/HomeMobile/HomeMobile'
 import { CountriesMob } from '../Mobile/CountriesMob/CountriesMob'
-
+import { AboutMobile } from '../Mobile/AboutMobile/AboutMobile'
+import { CoursesMobile } from '../Mobile/CoursesMobile/CoursesMobile'
+import { ContactUsMobile } from '../Mobile/ContactUsMobile/ContactUsMobile'
 export const LandingView = () => {
     return (
         <>
@@ -42,6 +44,11 @@ export const LandingView = () => {
                 <section className='HomeMob'>
                     <HomeMobile />
                     <CountriesMob />
+                    <AboutMobile />
+                    <CoursesMobile />
+                    <ContactUsMobile />
+                    <StudentsLove />
+                    <Footer />  
                 </section>
             </div>
 

@@ -3,6 +3,7 @@
     width: 60%;
     border-radius: 20px;
     background-color: black;
+    padding: 20px 20px;
 }
 
 .ExpertAdviceText {
@@ -11,6 +12,10 @@
 }
 
 .ExpertAdviceSec1 {
+    width: 50%;
+}
+
+.ExpertAdviceSec {
     width: 50%;
 }
 
@@ -31,13 +36,64 @@
 .ExpertAdviceAdjstFinal {
     display: flex;
     width: 100%;
-
-
+    height: auto;
+}
+.ExpertAdviceBTnDiv {
+    display: flex;
+    justify-content: flex-start;
 }
 
 
 @media screen and (max-width: 1000px) {
     .ExpertAdviceText {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .ExpertAdviceAdjst {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ExpertAdviceSec {
+        width: 100%;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px 20px;
+    }
+
+    .ExpertAdviceSec1 {
+        width: 100%;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px 20px;
+
+    }
+
+    .ExpertAdviceAdjstFinal {
+        flex-direction: column;
+        background-color: transparent;
+        gap: 20px;
+    }
+
+    .ExpertAdviceAdjstFinal {
+        flex-direction: column;
+        background-color: transparent;
+        gap: 20px;
+    }
+  
+    .ExpertAdviceAdjst {
+        padding: 00px;
+        background-color: transparent;
+    }
+
+    .ExpertAdviceText {
+        font-size: 17px;
+    }
+
+    .ExpertAdviceBTnDiv {
+        display: flex;
+        justify-content: center;
     }
 }

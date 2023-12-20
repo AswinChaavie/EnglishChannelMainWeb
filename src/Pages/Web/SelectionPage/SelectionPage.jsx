@@ -18,7 +18,7 @@ export const SelectionPage = () => {
         <>
             <div className="SelectionAlign p-5">
                 <div className="SelectionSec p-3">
-                    <div className="SelectionButtonSec p-1">
+                    <div className="SelectionButtonSec">
                         {ButtonData.map((ele, index) => (
                             <ButtonField
                                 key={index}
@@ -30,11 +30,14 @@ export const SelectionPage = () => {
                             />
                         ))}
                     </div>
-                    {ButtonFalse['Admission Requirements'] ? <Admission /> :
-                        ButtonFalse['Expense Calculator'] ?
-                            < Calculator />
-                            : ""
-                    }
+                    <div className='SelectionUnderField p-3'>
+                        {ButtonFalse['Admission Requirements'] ? <Admission /> :
+                            ButtonFalse['Expense Calculator'] ?
+                                < Calculator />
+                                : ""
+                        }
+                    </div>
+
                 </div>
             </div>
         </>

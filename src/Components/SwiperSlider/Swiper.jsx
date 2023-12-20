@@ -30,6 +30,8 @@ export default function SwiperSliders({ Courses, mobile }) {
                 <>
                     {!mobile ?
                         <>
+                            {/* CountriesSlider */}
+
                             <div className='swiperAdjstAlign'>
                                 <Swiper
                                     spaceBetween={50}
@@ -199,9 +201,15 @@ export default function SwiperSliders({ Courses, mobile }) {
                                 <button className="custom-prev-button"><ArrowBackIcon /></button>
                                 <button className="custom-next-button"><ArrowForwardIcon id="swiperPreFontSet" /></button>
                             </div>
+
+
+                            {/* End CountriesSlider */}
+
                         </>
                         :
+
                         <>
+                            {/* MobileFeatruedCountriesSlider */}
                             <Swiper
                                 spaceBetween={50}
                                 slidesPerView={1}
@@ -283,11 +291,14 @@ export default function SwiperSliders({ Courses, mobile }) {
                                 <button className="custom-prev-button"><ArrowBackIcon /></button>
                                 <button className="custom-next-button"><ArrowForwardIcon id="swiperPreFontSet" /></button>
                             </div>
+                            {/* End MobileFeatruedCountriesSlider */}
+
                         </>
                     }
                 </>
                 :
                 <>
+                    {/* WebCourseSlider */}
                     <div className='swiperAdjstAlign2'>
                         <Swiper
                             spaceBetween={50}
@@ -427,7 +438,7 @@ export default function SwiperSliders({ Courses, mobile }) {
                         <button className="custom-prev-button"><ArrowBackIcon /></button>
                         <button className="custom-next-button"><ArrowForwardIcon id="swiperPreFontSet" /></button>
                     </div>
-
+                    {/* End WebCourseSlider */}
                 </>
 
             }

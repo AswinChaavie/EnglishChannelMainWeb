@@ -13,8 +13,6 @@
 
 .FooterAlignmentImgs {
     height: 60px;
-    object-fit: cover;
-    width: 200px;
 }
 
 .FooterAlignmentIText {
@@ -58,8 +56,50 @@
     color: #ED145C;
     border-radius: 50%;
 }
+
 @media screen and (max-width: 1000px) {
-    .FooterAlignSec3Social{
+    .FooterAlignSec3Social {
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .FooterAlignment {
+        flex-direction: column;
+    }
+
+    .FooterAlignmentSec {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FooterAlignmentImgs {
+        height: 50px;
+    }
+
+    .FooterAlignmentImgAlign {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .FooterAlignmentSec2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FooterAlignmentSec3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FooterAlignSec3Social {
+        justify-content: center;
     }
 }

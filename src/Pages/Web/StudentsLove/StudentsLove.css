@@ -2,6 +2,7 @@
     width: 100%;
     height: 70vh;
     display: flex;
+    padding: 50px 50px;
 }
 
 .StudentsLoveSec {
@@ -53,4 +54,22 @@
 .StudentsLoveText3 {
     font-size: 22px;
     color: rgba(0, 0, 0, 0.831);
+}
+
+@media screen and (max-width: 699px) {
+    .StudentsLove {
+        flex-direction: column;
+    }
+
+    .StudentsLoveSec {
+        width: 100%;
+    }
+
+    .StudentsLoveSec2 {
+        width: 100%;
+    }
+
+    .StudentsLove {
+        padding: 00px;
+    }
 }

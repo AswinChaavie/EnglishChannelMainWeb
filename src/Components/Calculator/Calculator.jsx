@@ -39,10 +39,10 @@ export const Calculator = () => {
     }
     return (
         <>
-            <div className='CalculatorAlign'>
-                <div data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='CalculatorAlignSec p-4'>
+            <div data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" className='CalculatorAlign'>
+                <div className='CalculatorAlignSec p-4'>
                     <TextField data={{ style: "CalculatorAlignSecM", Text: "Money you need" }} />
                     <TextField data={{ style: "CalculatorAlignSecCo", Text: "You must have enough money to pay for your course and support yourself in the UK." }} />
                     <TextField data={{ style: "CalculatorAlignSecCo", Text: "How much money you need depends on your circumstances and what you’re applying for." }} />
@@ -53,9 +53,7 @@ export const Calculator = () => {
                     <TextField data={{ style: "CalculatorAlignSecCo", Text: "You’ll need to show you have enough money to support yourself." }} />
                     <TextField data={{ style: "CalculatorAlignSecCo", Text: "How much money you need depends on where you will be studying. You’ll need either" }} />
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='CalculatorAlignSec2 p-4'>
+                <div className='CalculatorAlignSec2 p-4'>
                     <div className='CalculatorAlignSec2DivAdj'>
                         <TextField data={{ style: "CalculatorAlignSec2Text", Text: "Tuition fee" }} />
                         <InputField data={{ type: "number", style: "CalculatorInput", name: "tuition", InputOnchange }} />
@@ -85,7 +83,7 @@ export const Calculator = () => {
                             <TextField data={{ style: "CalculatorFleText", Text: `£ ${total}` }} />
                         </div>
                     </div>
-                </div>
+                </div>b
             </div>
         </>
     )

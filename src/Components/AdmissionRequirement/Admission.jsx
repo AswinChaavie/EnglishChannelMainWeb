@@ -97,10 +97,10 @@ export const Admission = () => {
                     </div>
                 </div>
             </div> */}
-            <div className='AdmissionAlign'>
-                <div data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='AdmissionCardSec1 p-4'>
+            <div data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" className='AdmissionAlign'>
+                <div className='AdmissionCardSec1 p-4'>
                     <TextField data={{
                         style: "AdmissionCardFrontText", Text: "Bachelors Level"
                     }} />
@@ -110,9 +110,7 @@ export const Admission = () => {
                         )}
                     </ul>
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='AdmissionCardSec2 p-4'>
+                <div className='AdmissionCardSec2 p-4'>
                     <TextField data={{
                         style: "AdmissionCardFrontText", Text: "Masters Level"
                     }} />

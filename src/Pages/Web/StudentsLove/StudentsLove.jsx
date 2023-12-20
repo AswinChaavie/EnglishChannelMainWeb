@@ -18,7 +18,7 @@ export const StudentsLove = () => {
         <>
             <div data-aos="fade-right"
                 data-aos-offset="300"
-                data-aos-easing="ease-in-sine" className='StudentsLove p-5'>
+                data-aos-easing="ease-in-sine" className='StudentsLove'>
                 <div className='StudentsLoveSec'>
                     <div className="video-wrapper">
                         <ReactPlayer

@@ -15,7 +15,9 @@ export const Footer = () => {
         <>
             <div className='FooterAlignment'>
                 <div className='FooterAlignmentSec p-4'>
-                    <ImageField data={{ ImgName: "logo (1) 1.png", style: "FooterAlignmentImgs" }} />
+                    <div className='FooterAlignmentImgAlign'>
+                        <ImageField data={{ ImgName: "logo (1) 1.png", style: "FooterAlignmentImgs" }} />
+                    </div>
                     <TextField data={{ style: "FooterAlignmentIText", Text: "ENGLISH HOUSE" }} />
                     <TextField data={{ style: "FooterAlignmentIText2", Text: "Block, Ground floorMunicipal No: 30 Vaishnavi Silicon TerracesHosur Rd, AdugodiBengaluru, Karnataka 560 095" }} />
                 </div>
