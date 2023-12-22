@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./CoursesMobile.css"
 import { TextField } from '../../../Components/MainComponents/TextField'
 import { ImageField } from '../../../Components/MainComponents/ImageField'
 import { ButtonField } from '../../../Components/MainComponents/ButtonField'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useLocation } from 'react-router-dom'
 export const CoursesMobile = () => {
+    const location = useLocation();
+    useEffect(() => {
+        AOS.init({
+            once: false,
+        });
+        AOS.refresh(); // Manually refresh AOS on route change
+    }, [location.pathname]);
     return (
         <>
             <div className='CoursesMobileALign p-3'>
@@ -43,7 +53,9 @@ export const CoursesMobile = () => {
                         </div>
                     </div>
                 </div>
-                <ButtonField data={{ style: "CoursesMobileButton", text: "Explore All Courses"  }} />
+                <div data-aos="zoom-in-down">
+                    <ButtonField data={{ style: "CoursesMobileButton", text: "Explore All Courses" }} />
+                </div>
             </div>
         </>
     )

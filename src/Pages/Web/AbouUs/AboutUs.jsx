@@ -54,27 +54,27 @@ export const AboutUs = () => {
                             </a>
                         </div>
                         <div className='AboutUsLastContent'>
-                            <div data-aos="fade-left" data-aos-duration="300" className='AboutUsLastFlexAlgn'>
+                            <div data-aos="fade-right" data-aos-duration="300" className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
                                     style: "AboutUsInnerSecond_secFont", Text: "Counseling towards the right course and University. "
                                 }} />
                             </div>
-                            <div data-aos="fade-left" data-aos-duration="600" className='AboutUsLastFlexAlgn'>
+                            <div data-aos="fade-right" data-aos-duration="600" className='AboutUsLastFlexAlgn'>
 
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
                                     style: "AboutUsInnerSecond_secFont", Text: "Assistance with pre-departure formalities."
                                 }} />
                             </div>
-                            <div data-aos="fade-left" data-aos-duration="900" className='AboutUsLastFlexAlgn'>
+                            <div data-aos="fade-right" data-aos-duration="900" className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
                                     style: "AboutUsInnerSecond_secFont", Text: "Personalized support  and accommodation suggestions at the destination."
                                 }} />
                             </div>
 
-                            <div data-aos="fade-left" data-aos-duration="1200" className='AboutUsLastFlexAlgn'>
+                            <div data-aos="fade-right" data-aos-duration="1200" className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
                                     style: "AboutUsInnerSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./LandingView.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import { Home } from '../Web/Home/Home'
@@ -13,7 +13,19 @@ import { CountriesMob } from '../Mobile/CountriesMob/CountriesMob'
 import { AboutMobile } from '../Mobile/AboutMobile/AboutMobile'
 import { CoursesMobile } from '../Mobile/CoursesMobile/CoursesMobile'
 import { ContactUsMobile } from '../Mobile/ContactUsMobile/ContactUsMobile'
+import { useLocation } from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export const LandingView = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        AOS.init({
+            once: false,
+        });
+        AOS.refresh(); // Manually refresh AOS on route change
+    }, [location.pathname]);
     return (
         <>
             <div className='responsiveWeb'>
@@ -42,13 +54,36 @@ export const LandingView = () => {
             </div>
             <div className='responsiveMobile'>
                 <section className='HomeMob'>
-                    <HomeMobile />
-                    <CountriesMob />
-                    <AboutMobile />
-                    <CoursesMobile />
-                    <ContactUsMobile />
-                    <StudentsLove />
-                    <Footer />  
+                    <div data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <HomeMobile />
+                    </div>
+                    <div data-aos="zoom-in-down">
+                        <CountriesMob />
+                    </div>
+                    <div data-aos="zoom-in-right">
+                        <AboutMobile />
+                    </div>
+                    <div data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <CoursesMobile />
+                    </div>
+                    <div>
+                        <ContactUsMobile />
+                    </div>
+                    <div>
+                        <StudentsLove />
+                    </div>
+                    <div>
+                        <Footer />
+                    </div>
+
+
+
+
+
                 </section>
             </div>
 

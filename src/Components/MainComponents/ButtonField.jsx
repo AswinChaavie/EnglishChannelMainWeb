@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-export const ButtonField = ({ data: { style, text, designed, Fn } }) => {
+export const ButtonField = ({ data: { style, text, designed, Fn, index } }) => {
     const location = useLocation();
     useEffect(() => {
         AOS.init({
@@ -15,7 +15,7 @@ export const ButtonField = ({ data: { style, text, designed, Fn } }) => {
             {designed ?
                 <button className="AboutUsAlignLetsButton">{text}</button>
                 :
-                <button onClick={() => { Fn(text) }} className={style}>{text}</button>
+                <button onClick={() => { Fn(index) }} className={style}>{text}</button>
 
             }
 

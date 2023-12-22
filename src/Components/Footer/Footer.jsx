@@ -9,7 +9,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 export const Footer = () => {
     const Courses = ["Health and Medicine", "Hospitality and Tourism", "Engineering",
         "Business and Management", "Environmental Science", "Building and Architecture",
-        "Welfare Studies and Services", "Media and Comminication"]
+        "Welfare Studies and Services", "Media and Communication"]
     const Countries = ["United Kingdom", "Canada", "Australia", "New Zealand", "France"]
     return (
         <>

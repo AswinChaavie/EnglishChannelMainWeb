@@ -83,7 +83,7 @@ export const Calculator = () => {
                             <TextField data={{ style: "CalculatorFleText", Text: `£ ${total}` }} />
                         </div>
                     </div>
-                </div>b
+                </div>
             </div>
         </>
     )

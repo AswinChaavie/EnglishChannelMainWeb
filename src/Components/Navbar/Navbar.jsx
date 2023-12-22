@@ -32,7 +32,7 @@ function Navbar({ countrie }) {
                             <TextField data={{ Text: "About", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
                         <select value={location?.state} onChange={(e) => { navigate("/countries", { state: e.target.value }) }} className={countrie ? 'NavbarText2Selection2' : "NavbarText2Selection"} name="" id="">
-                            <option value="">
+                            <option disabled selected value="">
                                 <TextField data={{ Text: "Countries", style: countrie ? "NavbarText2" : "NavbarText" }} />
                             </option>
                             <option value="ca">Canada</option>
