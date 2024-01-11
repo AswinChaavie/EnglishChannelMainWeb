@@ -1,0 +1,54 @@
+.MobileNavbardis {
+    width: 100%;
+    display: none;
+    height: 50px;
+    padding: 10px;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.MobileNavbarend {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.MobileNavbarlogo {
+    height: 30px;
+    object-fit: cover;
+}
+
+#MobileNavbarMenu {
+    color: #ED145C;
+    cursor: pointer;
+}
+
+.MobileNavbarLinks {
+    padding: 10px;
+    background-color: #ed145c21;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.MobileNavbaraTag {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 699px) {
+    .MobileNavbardis {
+        display: block;
+        display: flex;
+    }
+
+
+}

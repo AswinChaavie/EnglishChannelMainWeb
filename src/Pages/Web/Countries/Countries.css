@@ -87,7 +87,11 @@
     color: black;
 
 }
+
 /* ImageWithGradient.css */
 
-
-  
+@media screen and (max-width: 699px) {
+    .HidePage{
+        display: none;
+    }
+}

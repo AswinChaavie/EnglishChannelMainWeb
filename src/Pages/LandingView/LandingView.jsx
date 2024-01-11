@@ -16,6 +16,7 @@ import { ContactUsMobile } from '../Mobile/ContactUsMobile/ContactUsMobile'
 import { useLocation } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { MobileNavbar } from '../Mobile/MobileNavbar/MobileNavbar'
 
 export const LandingView = () => {
     const location = useLocation();
@@ -26,6 +27,7 @@ export const LandingView = () => {
         });
         AOS.refresh(); // Manually refresh AOS on route change
     }, [location.pathname]);
+
     return (
         <>
             <div className='responsiveWeb'>
@@ -53,38 +55,49 @@ export const LandingView = () => {
                 </section>
             </div>
             <div className='responsiveMobile'>
-                <section className='HomeMob'>
+                <MobileNavbar />
+                <section id='HomeMob'>
                     <div data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
                         <HomeMobile />
                     </div>
+                </section>
+                <section id='countriesMob'>
                     <div data-aos="zoom-in-down">
                         <CountriesMob />
                     </div>
+                </section>
+                <section id='aboutMob'>
                     <div data-aos="zoom-in-right">
                         <AboutMobile />
                     </div>
+                </section>
+
+                <section id='courseMob'>
                     <div data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
                         <CoursesMobile />
                     </div>
+                </section>
+                <section id='contactMob'>
                     <div>
                         <ContactUsMobile />
                     </div>
+                </section>
+                <section id='studentsMob'>
+
                     <div>
                         <StudentsLove />
                     </div>
+                </section>
+                <section className='HomeMob'>
                     <div>
                         <Footer />
                     </div>
-
-
-
-
-
                 </section>
+
             </div>
 
         </>

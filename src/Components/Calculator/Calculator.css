@@ -30,6 +30,7 @@
     border: 1px solid #ED145C;
     border-radius: 6px;
     width: 100%;
+    padding: 10px;
 }
 
 .CalculatorAlignSec2DivAdj {
@@ -48,6 +49,7 @@
     border: none;
     border-radius: 6px;
     color: white;
+    padding: 10px;
 }
 
 .CalculatorFleText {

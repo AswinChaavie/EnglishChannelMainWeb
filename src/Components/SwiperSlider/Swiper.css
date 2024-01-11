@@ -313,18 +313,26 @@
 
     .swiperInnerBox {
         width: 100%;
+        padding: 15px;
+        height: 90%;
     }
-    .swiperInnerBoxer{
+
+    .swiperInnerBoxer {
         width: 100%;
     }
-   
+
 }
+
 @media screen and (max-width: 699px) {
-   
-    .cta{
+    .cta {
         padding: 2px 13px;
     }
-    .swiperPreNext{
+
+    .swiperPreNext {
+        justify-content: center;
+    }
+
+    .swiperCourseSecSettings {
         justify-content: center;
     }
 }
