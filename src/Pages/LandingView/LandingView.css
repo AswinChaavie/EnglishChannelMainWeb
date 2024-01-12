@@ -1,4 +1,6 @@
-/* YourComponent.css */
+.responsiveWeb {
+    scroll-behavior: smooth;
+}
 
 .responsiveMobile {
     display: none;
@@ -8,12 +10,12 @@
     display: block;
 }
 
-    @media screen and (max-width: 699px) {
-        .responsiveWeb {
-            display: none;
-        }
 
-        .responsiveMobile {
-            display: block;
-        }
+@media screen and (max-width: 699px) {
+    .responsiveWeb {
+        display: none;
     }
+    .responsiveMobile {
+        display: block;
+    }
+}

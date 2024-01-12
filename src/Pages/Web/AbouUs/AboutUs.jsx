@@ -18,6 +18,7 @@ export const AboutUs = () => {
     }, [location.pathname]);
     return (
         <>
+        
             <div className='AboutUsAlign p-4'>
                 <TextField data={{
                     style: "AboutUsSecondCoughtFont", Text: "Why ENGLISH CHANNEL leads the race?"

@@ -27,6 +27,10 @@
     height: 40px;
     object-fit: cover;
 }
+.NavbarLogo2 {
+    height: 40px;
+    object-fit: cover;
+}
 
 .NavbarText {
     font-family: 'Quicksand', sans-serif;

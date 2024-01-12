@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./LandingView.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import { Home } from '../Web/Home/Home'
@@ -17,24 +17,31 @@ import { useLocation } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { MobileNavbar } from '../Mobile/MobileNavbar/MobileNavbar'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export const LandingView = () => {
+    const ref = useRef(null)
     const location = useLocation();
-
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end start"],
+    });
+    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"])
     useEffect(() => {
         AOS.init({
             once: false,
         });
-        AOS.refresh(); // Manually refresh AOS on route change
+        AOS.refresh();
     }, [location.pathname]);
+
 
     return (
         <>
-            <div className='responsiveWeb'>
-                <Navbar />
-                <section id='navigator_Home'>
+            <div className='responsiveWeb' >
+                <motion.section style={{ y: backgroundY }} id='navigator_Home'>
+                    <Navbar />
                     <Home />
-                </section>
+                </motion.section>
                 <section id='navigator_contries'>
                     <FeaturedCountries />
                 </section>

@@ -16,7 +16,7 @@ export const FeaturedCountries = () => {
     }, [location.pathname]);
     return (
         <>
-            <div className='FeaturedAlign p-4'>
+            <div className='FeaturedAlign'>
                 <div className='FeaturedAlign'>
                     <div data-aos="fade-down" className='FeaturedTextAlign'>
                         <TextField data={{ style: "FeaturedTextField", Text: "Choose your Countries" }} />

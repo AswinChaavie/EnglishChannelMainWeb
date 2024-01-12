@@ -24,7 +24,7 @@ function Navbar({ countrie }) {
                 <div className='Navbar_adjst'>
                     <div className=''>
                         <a href="/">
-                            <ImageField data={{ ImgName: "logo (1) 1.png", style: "NavbarLogo" }} />
+                            <ImageField data={{ ImgName: !countrie ? "logo (1) 1.png" : "Untitled-1.png", style: !countrie ? "NavbarLogo" : "NavbarLogo2" }} />
                         </a>
                     </div>
                     <div className='NavbarSettingGap'>
