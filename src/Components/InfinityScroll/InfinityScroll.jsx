@@ -47,7 +47,7 @@ export const InfinityScroll = () => {
                                 disableOnInteraction: false,
                             }}
                         >
-                            {images?.map((ele, index) =>
+                            {images?.map((ele) =>
                                 <div key={ele} className="InfinityScrollSlideAdjst">
                                     <SwiperSlide className="InfinityScrollswiperslide">
                                         <div className="InfinityScrollSlide">

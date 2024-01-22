@@ -14,11 +14,10 @@ export const AboutUs = () => {
         AOS.init({
             once: false,
         });
-        AOS.refresh(); // Manually refresh AOS on route change
+        AOS.refresh();
     }, [location.pathname]);
     return (
         <>
-        
             <div className='AboutUsAlign p-4'>
                 <TextField data={{
                     style: "AboutUsSecondCoughtFont", Text: "Why ENGLISH CHANNEL leads the race?"
@@ -62,7 +61,6 @@ export const AboutUs = () => {
                                 }} />
                             </div>
                             <div data-aos="fade-right" data-aos-duration="600" className='AboutUsLastFlexAlgn'>
-
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
                                     style: "AboutUsInnerSecond_secFont", Text: "Assistance with pre-departure formalities."
@@ -74,21 +72,15 @@ export const AboutUs = () => {
                                     style: "AboutUsInnerSecond_secFont", Text: "Personalized support  and accommodation suggestions at the destination."
                                 }} />
                             </div>
-
                             <div data-aos="fade-right" data-aos-duration="1200" className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
-                                    style: "AboutUsInnerSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."
+                                    style: "AboutUsInnerSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."
                                 }} />
                             </div>
                         </div>
-
                     </div>
-
-
-
                 </div>
-
             </div>
 
         </>

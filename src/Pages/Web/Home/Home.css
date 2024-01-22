@@ -33,6 +33,7 @@
 .Home_font1 {
     font-size: 40px;
     font-weight: bold;
+    width: 90%;
 }
 
 p {
@@ -117,9 +118,10 @@ p {
     display: flex;
 }
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1158px) {
     .Home_font1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .Home_lastText {

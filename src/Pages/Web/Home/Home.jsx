@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { CounterBar } from '../../../Components/CounterBar/CounterBar'
 import { useLocation } from 'react-router-dom'
+import WorldAnimation from '../../../Components/WorldAnnimation/WorldAnnimation'
 export const Home = () => {
     const location = useLocation();
 
@@ -31,7 +32,8 @@ export const Home = () => {
                     </div>
                     <div className='homeSec_settin2'>
                         <div className='Home_fontBtalignS'>
-                            <ImageField data={{ style: "homeSectionImage", ImgName: "Group 27.png" }} />
+                            <WorldAnimation />
+                            <ImageField data={{ style: "homeSectionImage", ImgName: "secondStatue.png" }} />
                             <div className='Home_lastSecAlign'>
                                 <TextField data={{
                                     style: "Home_lastText", Text: "Embark on your academic journey with English Channel, your trusted companion for seamless migration to global education destinations. Elevate your future with confidence!"

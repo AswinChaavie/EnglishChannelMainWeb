@@ -1,0 +1,22 @@
+.three-container {
+    height: 300px;
+    width: 300px;
+}
+
+#yourThreeJSContainer {
+    margin: -150px -200px;
+
+}
+
+@media screen and (max-width: 1000px) {
+    #yourThreeJSContainer {
+        margin: -100px -200px;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .three-container {
+        display: none;
+    }
+}

@@ -12,7 +12,7 @@ export const HomeMobile = () => {
         AOS.init({
             once: false,
         });
-        AOS.refresh(); // Manually refresh AOS on route change
+        AOS.refresh(); 
     }, [location.pathname]);
     return (
         <>
@@ -26,7 +26,7 @@ export const HomeMobile = () => {
                         className='HomeMobAdjstImg'>
                         <ImageField data={{ ImgName: "casual-life-3d-books-graduation-hat-and-diploma-scroll 1.png", style: "HomeMobImage2" }} />
                     </div>
-                    <ImageField data={{ ImgName: "3d-business-graduated-student-showing-her-diploma 1.png", style: "HomeMobImage1" }} />
+                    <ImageField data={{ ImgName: "secondStatue.png", style: "HomeMobImage1" }} />
                     <div data-aos="zoom-in"
                         data-aos-duration="2500" className='HomeMobAdjstImg'>
                         <ImageField data={{ ImgName: "casual-life-3d-stack-of-books-and-mug-next-to-laptop-screen-showing-planets 1.png", style: "HomeMobImage2" }} />

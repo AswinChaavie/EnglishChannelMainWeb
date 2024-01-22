@@ -99,6 +99,20 @@ a {
     height: 40px;
     color: rgb(245, 242, 242);
     letter-spacing: 2px;
+    transition: 0.5s;
+
+}
+
+.AboutUsAlignLetsButton:hover {
+    transform: scale(1.1);
+}
+
+button {
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .AboutUsAlignLets {

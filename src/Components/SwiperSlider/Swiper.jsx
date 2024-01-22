@@ -40,9 +40,9 @@ export default function SwiperSliders({ Courses, mobile }) {
                                         nextEl: '.custom-next-button',
                                         prevEl: '.custom-prev-button',
                                     }}
-                                    history={{
-                                        key: 'slide',
-                                    }}
+                                    // history={{
+                                    //     key: 'slide',
+                                    // }}
                                     modules={[Navigation, Pagination, History]}
                                     className="mySwiper"
                                 >
@@ -217,9 +217,9 @@ export default function SwiperSliders({ Courses, mobile }) {
                                     nextEl: '.custom-next-button',
                                     prevEl: '.custom-prev-button',
                                 }}
-                                history={{
-                                    key: 'slide',
-                                }}
+                                // history={{
+                                //     key: 'slide',
+                                // }}
                                 modules={[Navigation, Pagination, History]}
                                 className="mySwiper"
                             >
@@ -307,9 +307,9 @@ export default function SwiperSliders({ Courses, mobile }) {
                                 nextEl: '.custom-next-button',
                                 prevEl: '.custom-prev-button',
                             }}
-                            history={{
-                                key: 'slide',
-                            }}
+                            // history={{
+                            //     key: 'slide',
+                            // }}
                             modules={[Navigation, Pagination, History]}
                             className="mySwiper"
                         >
