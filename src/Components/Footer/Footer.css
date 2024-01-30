@@ -63,7 +63,7 @@
     }
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 750px) {
     .FooterAlignment {
         flex-direction: column;
     }

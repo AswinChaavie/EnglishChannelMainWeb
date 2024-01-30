@@ -18,7 +18,7 @@ export const MobileNavbar = () => {
     return (
         <>
             <div className='MobileNavbardis'>
-                <ImageField data={{ style: "MobileNavbarlogo", ImgName: "logo (1) 1.png" }} />
+                <ImageField data={{ style: "MobileNavbarlogo", ImgName: "Untitled-1.png" }} />
                 <div className='MobileNavbarend'>
                     <div onClick={() => { setTogler(Togler ? false : true) }}>
                         <MenuIcon id="MobileNavbarMenu" />

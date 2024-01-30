@@ -4,7 +4,10 @@
     height: 60px;
     background-color: black;
     align-items: center;
+    position: relative;
+    z-index: 9999;
 }
+
 
 .Navbar_align2 {
     width: 100%;
@@ -12,10 +15,13 @@
     height: 60px;
     background-color: rgb(255, 255, 255);
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 .Navbar_adjst {
-    padding: 00px 50px 00px 50px;
+    padding: 00px 20px 00px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +33,7 @@
     height: 40px;
     object-fit: cover;
 }
+
 .NavbarLogo2 {
     height: 40px;
     object-fit: cover;
@@ -39,6 +46,7 @@
     letter-spacing: 1px;
     cursor: pointer;
     color: white;
+    transition: 500ms ease-in-out;
 }
 
 .NavbarText2 {
@@ -49,19 +57,38 @@
     cursor: pointer;
     color: black;
     font-weight: bold;
-
 }
 
 .NavbarText:hover {
     color: #ED145C;
+    transform: scale(1.1);
 
+}
+
+.Navbaroptions {
+    color: #ffffff;
+    transition: 500ms ease-in-out;
+}
+
+.NavbarText2 {
+    transition: 500ms ease-in-out;
+    color: black;
+}
+
+.NavbarText2:hover {
+    color: #ED145C;
+}
+
+.NavbarText2Selection:hover {
+    color: #ED145C;
+    border: none;
 }
 
 .NavbarSettingGap {
     display: flex;
     width: 40%;
     justify-content: center;
-    justify-content: space-around;
+    gap: 40px;
 }
 
 .NavbarSettingGap2 {
@@ -95,6 +122,14 @@
     color: white;
 }
 
+.Navbaroptions1 {
+    color: black;
+}
+
+.NavbarText2Selection2:hover {
+    color: #ED145C;
+}
+
 .NavbarText2Selection2 {
     border: none;
     font-weight: 600;
@@ -102,7 +137,9 @@
     text-wrap: nowrap;
     text-overflow: ellipsis;
     font-family: 'Quicksand', sans-serif;
-    width: 90px;
+    width: 100px;
+    transition: 500ms ease-in-out;
+    letter-spacing: 1px;
 }
 
 .NavbarText2Selection {
@@ -115,4 +152,5 @@
     background-color: black;
     letter-spacing: 1px;
     font-size: 17px;
+    transition: 500ms ease-in-out;
 }

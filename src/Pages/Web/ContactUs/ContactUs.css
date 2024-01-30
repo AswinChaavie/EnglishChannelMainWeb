@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 9999;
 }
 
 .ContactUsAlignSec2Contact {

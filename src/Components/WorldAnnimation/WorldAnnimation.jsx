@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import * as THREE from "https://cdn.skypack.dev/three@0.132.2";
-import { TrackballControls } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/controls/TrackballControls.js";
-import { OBJLoader } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/OBJLoader.js";
-import { MeshSurfaceSampler } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/math/MeshSurfaceSampler.js";
+// Replace dynamic imports with static imports
+import * as THREE from "three";
+import { TrackballControls } from "three/examples/jsm/controls/TrackballControls.js";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { MeshSurfaceSampler } from "three/examples/jsm/math/MeshSurfaceSampler.js";
+
 import "./WorldAnnimation.css";
 
 const WorldAnimation = () => {
@@ -22,7 +24,7 @@ const WorldAnimation = () => {
         controls.noPan = true;
         controls.maxDistance = 600;
         controls.minDistance = 150;
-        controls.rotateSpeed = 2;
+        controls.rotateSpeed = 10;
         controls.noZoom = true; // Disable zooming
         const group = new THREE.Group();
         scene.add(group);
@@ -84,19 +86,12 @@ const WorldAnimation = () => {
                 const waterMat = new THREE.MeshLambertMaterial({ color: "#ED145C", transparent: true, opacity: 1 });
                 const water = new THREE.Mesh(waterGeom, waterMat);
                 group.add(water);
-                const light = new THREE.HemisphereLight(0xccffff, 0x000033, 1);
+                const light = new THREE.HemisphereLight(0xccffff, 0x000033, 3);
                 scene.add(light);
                 sampler = new MeshSurfaceSampler(land).build();
-                // for (let i = 0; i < 24; i++) {
-                //     const path = new Path();
-                //     paths.push(path);
-                //     group.add(path.line);
-                // }
-
                 renderer.setAnimationLoop(render);
             },
-            (xhr) => console.log((xhr.loaded / xhr.total) * 100 + "% loaded"),
-            (err) => console.error(err)
+            // (err) => console.error(err)
         );
 
         const tempPosition = new THREE.Vector3();
@@ -141,7 +136,6 @@ const WorldAnimation = () => {
         }
 
         window.addEventListener("resize", onWindowResize, false);
-
         function onWindowResize() {
             const newAspect = container.offsetWidth / container.offsetHeight;
             camera.aspect = newAspect;

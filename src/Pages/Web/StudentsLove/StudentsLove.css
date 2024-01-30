@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    background-color: white;
 }
 
 .video-wrapper {
@@ -34,15 +35,17 @@
 .StudentsLoveText {
     color: rgb(5, 5, 5);
     font-size: 35px;
-    height: 30px;
     font-weight: 600;
 }
 
 .StudentsLoveText2 {
     color: #ED145C;
-    font-size: 35px;
-    height: 30px;
-    font-weight: 600;
+    font-size: 25px;
+}
+
+.BlogSecAlign {
+    width: 100%;
+
 }
 
 .StudentsLoveFinal {
@@ -56,7 +59,21 @@
     color: rgba(0, 0, 0, 0.831);
 }
 
-@media screen and (max-width: 699px) {
+.StudentsLoveIframe {
+    border-radius: 20px;
+}
+
+.StudentsLoveBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.StudentsSliders {
+    padding: 10px;
+}
+
+@media screen and (max-width: 750px) {
     .StudentsLove {
         flex-direction: column;
     }

@@ -10,11 +10,18 @@
     display: block;
 }
 
+#responsiveNav {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
 
-@media screen and (max-width: 699px) {
+
+@media screen and (max-width: 750px) {
     .responsiveWeb {
         display: none;
     }
+
     .responsiveMobile {
         display: block;
     }

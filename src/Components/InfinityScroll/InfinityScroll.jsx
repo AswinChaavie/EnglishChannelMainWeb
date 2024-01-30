@@ -27,8 +27,7 @@ export const InfinityScroll = () => {
     }, [location.pathname]);
     return (
         <>
-            <div data-aos="fade-up"
-                data-aos-anchor-placement="center-bottom" className="InfinityScrollAligneset p-5">
+            <div className="InfinityScrollAligneset p-5">
                 <div className="InfinityScrollImg p-4">
                     <TextField data={{ style: "InfinityScrollText", Text: "Top Universities" }} />
                     <TextField data={{

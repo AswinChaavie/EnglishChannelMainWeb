@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./LandingView.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import { Home } from '../Web/Home/Home'
@@ -17,50 +17,65 @@ import { useLocation } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { MobileNavbar } from '../Mobile/MobileNavbar/MobileNavbar'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { Loader } from '../../Components/Loader/Loader'
+import axios from 'axios'
+import { api } from '../../config'
+// import { motion, useScroll, useTransform } from 'framer-motion'
 
 export const LandingView = () => {
-    const ref = useRef(null)
+    const [blogs, setblogs] = useState([])
     const location = useLocation();
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end start"],
-    });
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"])
+    // const { scrollYProgress } = useScroll({
+    //     target: ref,
+    //     offset: ["start start", "end start"],
+    // });
+    // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"])
     useEffect(() => {
         AOS.init({
             once: false,
         });
         AOS.refresh();
     }, [location.pathname]);
-
+    useEffect(() => {
+        axios.get(`${api}/users/getblog`).then((res) => {
+            setblogs(res?.data?.data)
+        })
+    }, [])
+    console.log(blogs)
 
     return (
         <>
-            <div className='responsiveWeb' >
-                <motion.section style={{ y: backgroundY }} id='navigator_Home'>
-                    <Navbar />
-                    <Home />
-                </motion.section>
-                <section id='navigator_contries'>
-                    <FeaturedCountries />
-                </section>
-                <section id='navigate_aboutUs'>
-                    <AboutUs />
-                </section>
-                <section id='navigate_Courses'>
-                    <Courses />
-                </section>
-                <section id='navigate_ContactUs'>
-                    <ContactUs />
-                </section>
-                <section id='navigate_StudentsLove'>
-                    <StudentsLove />
-                </section>
-                <section id='navigate_Footer'>
-                    <Footer />
-                </section>
-            </div>
+            {!blogs.length > 0 ? <Loader /> :
+                <div className='responsiveWeb'>
+                    <div id='responsiveNav'>
+                        <Navbar />
+                    </div>
+                    {/* <motion.section style={{ y: backgroundY }} id='navigator_Home'> */}
+                    <section id='navigator_Home'>
+                        <Home />
+                        {/* </motion.section> */}
+                    </section>
+                    <section id='navigator_contries'>
+                        {/* <section id='navigator_contries'> */}
+                        <FeaturedCountries />
+                    </section>
+                    <section id='navigate_aboutUs'>
+                        <AboutUs />
+                    </section>
+                    <section id='navigate_Courses'>
+                        <Courses />
+                    </section>
+                    <section id='navigate_ContactUs'>
+                        <ContactUs />
+                    </section>
+                    <section id='navigate_StudentsLove'>
+                        <StudentsLove data={{ blogs: blogs }} />
+                    </section>
+                    <section id='navigate_Footer'>
+                        <Footer />
+                    </section>
+                </div>
+            }
             <div className='responsiveMobile'>
                 <MobileNavbar />
                 <section id='HomeMob'>
@@ -80,7 +95,6 @@ export const LandingView = () => {
                         <AboutMobile />
                     </div>
                 </section>
-
                 <section id='courseMob'>
                     <div data-aos="fade-right"
                         data-aos-offset="300"
@@ -94,7 +108,6 @@ export const LandingView = () => {
                     </div>
                 </section>
                 <section id='studentsMob'>
-
                     <div>
                         <StudentsLove />
                     </div>
@@ -104,9 +117,7 @@ export const LandingView = () => {
                         <Footer />
                     </div>
                 </section>
-
             </div>
-
         </>
     )
 }

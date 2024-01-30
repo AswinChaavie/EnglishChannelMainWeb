@@ -324,7 +324,7 @@
 
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 750px) {
     .cta {
         padding: 2px 13px;
     }

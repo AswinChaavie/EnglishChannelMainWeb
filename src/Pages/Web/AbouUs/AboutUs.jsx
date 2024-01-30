@@ -9,7 +9,6 @@ import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 export const AboutUs = () => {
     const location = useLocation();
-
     useEffect(() => {
         AOS.init({
             once: false,

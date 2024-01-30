@@ -13,7 +13,7 @@ export const ButtonField = ({ data: { style, text, designed, Fn, index } }) => {
     return (
         <>
             {designed ?
-                <button className="A    boutUsAlignLetsButton">{text}</button>
+                <button className="AboutUsAlignLetsButton">{text}</button>
                 :
                 <button onClick={() => { Fn(index) }} className={style}>{text}</button>
 
@@ -22,3 +22,4 @@ export const ButtonField = ({ data: { style, text, designed, Fn, index } }) => {
         </>
     )
 }
+    

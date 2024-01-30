@@ -20,7 +20,7 @@ function Navbar({ countrie }) {
     return (
         <>
 
-            <div data-aos="fade-down" className={countrie ? 'Navbar_align2 p-1' : 'Navbar_align p-1'} >
+            <div className={countrie ? 'Navbar_align2 p-1' : 'Navbar_align p-1'} >
                 <div className='Navbar_adjst'>
                     <div className=''>
                         <a href="/">
@@ -35,14 +35,14 @@ function Navbar({ countrie }) {
                             <option disabled selected value="">
                                 <TextField data={{ Text: "Countries", style: countrie ? "NavbarText2" : "NavbarText" }} />
                             </option>
-                            <option value="ca">Canada</option>
-                            <option value="uk">United kingdom</option>
-                            <option value="nz">New Zealand</option>
+                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="ca">Canada</option>
+                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="uk">United kingdom</option>
+                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="nz">New Zealand</option>
                         </select>
                         <a href="/#navigate_Courses">
                             <TextField data={{ Text: "Courses", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
-                        <a href="/#navigate_StudentsLove ">
+                        <a href="/blogs">
                             <TextField data={{ Text: "Blog", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
                         <a href="/#navigate_ContactUs">

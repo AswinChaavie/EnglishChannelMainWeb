@@ -46,7 +46,6 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    height: 170px;
 
 }
 
@@ -87,11 +86,35 @@
     color: black;
 
 }
+.CountriesAlignDivImg{
+    border-radius: 20px;
+}
 
 /* ImageWithGradient.css */
 
-@media screen and (max-width: 699px) {
-    .HidePage{
-        display: none;
+@media screen and (max-width: 850px) {
+  
+    .CountriesAlignDivAlign{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .CountriesAlignDivSec{
+        width: 100%;
+    }
+    .CountriesAlignDivImg{
+        height: 500px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .CountriesAlign2DivFact{
+        padding: 0px;
+    }
+    .CountriesAlign2DivSec{
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
 }
