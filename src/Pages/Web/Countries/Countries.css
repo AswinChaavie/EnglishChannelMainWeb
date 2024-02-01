@@ -86,31 +86,38 @@
     color: black;
 
 }
-.CountriesAlignDivImg{
+
+.CountriesAlignDivImg {
     border-radius: 20px;
 }
 
 /* ImageWithGradient.css */
 
 @media screen and (max-width: 850px) {
-  
-    .CountriesAlignDivAlign{
+    .HidePage {
+        display: none;
+    }
+
+    .CountriesAlignDivAlign {
         flex-direction: column;
         gap: 30px;
     }
-    
-    .CountriesAlignDivSec{
+
+    .CountriesAlignDivSec {
         width: 100%;
     }
-    .CountriesAlignDivImg{
+
+    .CountriesAlignDivImg {
         height: 500px;
         object-fit: cover;
         border-radius: 20px;
     }
-    .CountriesAlign2DivFact{
+
+    .CountriesAlign2DivFact {
         padding: 0px;
     }
-    .CountriesAlign2DivSec{
+
+    .CountriesAlign2DivSec {
         padding: 0px;
         width: 100%;
         display: flex;
