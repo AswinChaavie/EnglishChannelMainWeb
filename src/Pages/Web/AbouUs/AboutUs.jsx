@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./AboutUs.css"
 import { ImageField } from '../../../Components/MainComponents/ImageField'
 import { TextField } from '../../../Components/MainComponents/TextField'
@@ -7,7 +7,11 @@ import 'aos/dist/aos.css';
 import { ButtonField } from '../../../Components/MainComponents/ButtonField';
 import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
+import { EnquiryForm } from '../../../Components/EnquiryForm/EnquiryForm';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify'
 export const AboutUs = () => {
+    const [popup, setpopup] = useState(false)
     const location = useLocation();
     useEffect(() => {
         AOS.init({
@@ -15,12 +19,27 @@ export const AboutUs = () => {
         });
         AOS.refresh();
     }, [location.pathname]);
+
+
+    const OpenPop = () => {
+        setpopup(true)
+        // return data.FnCall()
+    }
+
+    const close = () => {
+        setpopup(false)
+    }
+
     return (
         <>
+            <ToastContainer />  
             <div className='AboutUsAlign p-4'>
-                <TextField data={{
-                    style: "AboutUsSecondCoughtFont", Text: "Why ENGLISH CHANNEL leads the race?"
-                }} />
+                <div className='AboutUsSecondTextSet'>
+                    <TextField data={{
+                        style: "AboutUsSecondCoughtFont", Text: "Why ENGLISH CHANNEL leads the race?"
+                    }} />
+                </div>
+
                 <div className='AboutSecAlign'>
                     <div className='AboutUsSecset p-3'>
                         <ImageField data={{ style: "AboutUsSecsetImg", ImgName: "3d-casual-life-young-people-discussing-the-project 1.png" }} />
@@ -41,47 +60,58 @@ export const AboutUs = () => {
                         </div>
                     </div>
                     <div className='AboutUsSecset p-3'>
-                        <TextField data={{
-                            style: "AboutUsInnerSecond_sec", Text: "At English Channel, we share your mindset, constantly innovating strategies for talented students. Our dedicated team works tirelessly to tackle the major hurdle for aspiring students—finding the perfect university and courses tailored to their preferences."
-                        }} />
-                        <TextField data={{
-                            style: "AboutUsInnerSecond_sec", Text: "We offer comprehensive support throughout your academic journey, guiding you seamlessly from the application process to the completion of your dream course."
-                        }} />
-                        <div className='AboutUsAlignLets'>
-                            <a href="/side">
-                                <ButtonField data={{ text: "Talk To An Expert", designed: true }} />
-                            </a>
+                        <div>
+                            <TextField data={{
+                                style: "AboutUsInnerSecond_sec", Text: "English Channel stands at the forefront of education consulting, committed to  transforming dreams into global careers."
+                            }} />
+                            <TextField data={{
+                                style: "AboutUsInnerSecond_sec", Text: "Rooted locally with a visionary global outlook, English Channel pioneers in setting high standards and navigating students towards a future- oriented education."
+                            }} />
+
                         </div>
-                        <div className='AboutUsLastContent'>
-                            <div data-aos="fade-right" data-aos-duration="300" className='AboutUsLastFlexAlgn'>
+
+                        <div className='AboutUsAlignLets'>
+                            <ButtonField data={{ text: "Talk To An Expert", designed: true, Fn: OpenPop }} />
+                        </div>
+                        <div data-aos="fade-right" data-aos-duration="300" className='AboutUsLastContent'>
+                            <div className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
-                                    style: "AboutUsInnerSecond_secFont", Text: "Counseling towards the right course and University. "
+                                    style: "AboutUsInnerSecond_secFont", Text: "Understanding each student's unique goals and crafting a roadmap for their academic journey"
                                 }} />
                             </div>
-                            <div data-aos="fade-right" data-aos-duration="600" className='AboutUsLastFlexAlgn'>
+                            <div className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
-                                    style: "AboutUsInnerSecond_secFont", Text: "Assistance with pre-departure formalities."
+                                    style: "AboutUsInnerSecond_secFont", Text: "Connecting students with prestigious institutions worldwide."
                                 }} />
                             </div>
-                            <div data-aos="fade-right" data-aos-duration="900" className='AboutUsLastFlexAlgn'>
+                            <div className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
-                                    style: "AboutUsInnerSecond_secFont", Text: "Personalized support  and accommodation suggestions at the destination."
+                                    style: "AboutUsInnerSecond_secFont", Text: "Ensuring our students have a competitive edge in their academic pursuits."
                                 }} />
                             </div>
-                            <div data-aos="fade-right" data-aos-duration="1200" className='AboutUsLastFlexAlgn'>
+                            <div className='AboutUsLastFlexAlgn'>
                                 <DoneIcon id="AboutUsLastIcon" />
                                 <TextField data={{
-                                    style: "AboutUsInnerSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."
+                                    style: "AboutUsInnerSecond_secFont", Text: " Students learn not just from textbooks but from the rich tapestry of global cultures."
+                                }} />
+                            </div>
+                            <div className='AboutUsLastFlexAlgn'>
+                                <DoneIcon id="AboutUsLastIcon" />
+                                <TextField data={{
+                                    style: "AboutUsInnerSecond_secFont", Text: "From the initial stages of choosing a program to post-arrival assistance"
                                 }} />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            {popup ?
+                <EnquiryForm data={close} />
+                : ""
+            }
         </>
     )
 }

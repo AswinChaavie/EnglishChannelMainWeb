@@ -1,0 +1,18 @@
+.PostPermitH4 {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+    .PostPermitTextField {
+        font-size: 16px;
+    }
+
+    .PostPermitHtag {
+        font-size: 20px;
+    }
+
+    .PostPermitUl {
+        font-size: 17px;
+    }
+
+}

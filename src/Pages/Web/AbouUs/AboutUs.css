@@ -76,7 +76,6 @@ a {
     font-weight: bolder;
     color: black;
     text-align: center;
-    height: 100px;
 }
 
 .AboutUsInnerSecond_sec {
@@ -133,11 +132,18 @@ a {
     font-size: 30px;
 }
 
+.AboutUsSecondTextSet {
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .AboutUsInnerSecond_secFont {
     font-size: 17px;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    height: 20px;
 }
 
 .AboutUsLastFlexAlgn {
@@ -145,12 +151,51 @@ a {
     gap: 20px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .AboutUsSecsetImg {
         height: 15rem;
     }
 
     .AboutUsInnerCoughtFont {
         font-size: 13px;
+    }
+    .AboutUsInnerSecond_sec{
+        font-size: 15px;
+    }
+    .AboutUsInnerSecond_secFont{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .AboutUsSecsetImg{
+        height: 200px;
+    }
+    .AboutUsInnerSecond_secFont{
+        font-size: 13px;
+    }
+    .AboutUsInnerSecond_sec{
+        font-size: 14px;
+    }
+    .AboutUsSecset{
+        gap: 20px;
+    }
+    .AboutUsAlignLetsButton{
+        font-size: 15px;
+    }
+    .AboutUsSecsetCoughtsSec{
+        height: 120px;
+    }
+    .AboutUsInnerCoughtFont{
+        font-size: 10px
+    }
+    .AboutUsInnerSein{
+        height: 30px;
+        width: 30px;
+    }
+    .AboutUsInnerSec{
+        height: 30px;
+    }
+    .AboutUsSecondTextSet{
+        height: 100px;
     }
 }

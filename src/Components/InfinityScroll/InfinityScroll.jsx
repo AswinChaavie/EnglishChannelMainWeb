@@ -1,23 +1,20 @@
-import { TextField } from "../MainComponents/TextField";
-import "./InfinityScroll.css"
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { ImageField } from "../MainComponents/ImageField";
 import { Autoplay, Navigation } from 'swiper/modules';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from "react-router-dom";
-export const InfinityScroll = () => {
-    const images = [
-        "28aa18660423cdc66dbf93a8af21fd72.1043.webp",
-        "6354ffbe7d4bce280dab3df59d19b08c.6.webp",
-        "4c5db9f0b4a203668dbecbed5ddae456.493.webp",
-        "8ce26599f197f7f29afbdb261ac18715.8.webp",
-        "4266c552e6368ac021da9838b5f47c49.1-1.webp"
-    ]
+import { TextField } from "../MainComponents/TextField";
+import { ImageField } from "../MainComponents/ImageField";
+import "./InfinityScroll.css";
+import { courses } from '../../StoreData';
+
+export const InfinityScroll = ({ data }) => {
+    console.log("data.data", data?.data?.university)
+
     const location = useLocation();
     useEffect(() => {
         AOS.init({
@@ -26,44 +23,59 @@ export const InfinityScroll = () => {
         AOS.refresh();
     }, [location.pathname]);
     return (
-        <>
-            <div className="InfinityScrollAligneset p-5">
-                <div className="InfinityScrollImg p-4">
-                    <TextField data={{ style: "InfinityScrollText", Text: "Top Universities" }} />
-                    <TextField data={{
-                        style: "InfinityScrollText2", Text: "Learn from top-class universities abroad with expert assistance from ENSLISH CHANNEL. We help you get admitted to the best universities!"
-                    }} />
-                    <div className="InfinityScrollSwiper">
-                        <Swiper
-                            slidesPerView={3}
-                            centeredSlides={true}
-                            spaceBetween={10}
-                            navigation={true}
-                            modules={[Navigation, Autoplay]}
-                            className="mySwiper"
-                            autoplay={{
-                                delay: 1000,
-                                disableOnInteraction: false,
-                            }}
-                        >
-                            {images?.map((ele) =>
-                                <div key={ele} className="InfinityScrollSlideAdjst">
-                                    <SwiperSlide className="InfinityScrollswiperslide">
-                                        <div className="InfinityScrollSlide">
-                                            <ImageField data={{ ImgName: ele, style: "InfinityScrollSlideImg" }} />
-                                        </div>
-                                    </SwiperSlide>
-                                </div>
-                            )
-                            }
-                        </Swiper>
-                    </div>
+        <div className="InfinityScrollAligneset">
+            <div className="InfinityScrollImg p-4">
+                <div className='InfinityScrollImgAlign' data-aos="zoom-in" >
+                    <div className='InfinityScrollImgAlignSec1'>
 
+                    </div>
+                    <div className='InfinityScrollImgAlignSec'>
+                        <TextField data={{ style: "InfinityScrollText", Text: "Top Universities" }} />
+                    </div>
+                    <div className='InfinityScrollImgAlignKnow'>
+                        <a href="https://wa.me/918877222255">
+                            <TextField data={{ style: "InfinityScrollText3", Text: "Know more..." }} />
+                        </a>
+                    </div>
+                </div>
+                <TextField data={{
+                    style: "InfinityScrollText2", Text: "Learn from top-class universities abroad with expert assistance from ENSLISH CHANNEL. We help you get admitted to the best universities!"
+                }} />
+                <div className="InfinityScrollSwiper">
+                    <Swiper
+                        slidesPerView={3}
+                        centeredSlides={false}
+                        spaceBetween={0}
+                        navigation={true}
+                        autoplay={
+                            { delay: 2000 }
+                        }
+                        modules={[Navigation, Autoplay]}
+                        className="mySwiper"
+                        breakpoints={{
+                            100: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            }
+                        }}
+                    >
+
+                        {data?.data?.university?.map((ele, index) =>
+                            <SwiperSlide key={index} className="InfinityScrollSlideAdjst">
+                                <div className="InfinityScrollSlide">
+                                    {/* <ImageField data={{ ImgName: ele, style: "InfinityScrollSlideImg" }} /> */}
+                                    <p className='InfinintyScrollptag'>{ele}</p>
+                                </div>
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
                 </div>
             </div>
-
-        </>
-
-
+        </div >
     )
 }

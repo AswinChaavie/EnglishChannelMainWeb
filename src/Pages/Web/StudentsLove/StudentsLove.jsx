@@ -11,7 +11,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import ReactPlayer from 'react-player';
-
 export const StudentsLove = ({ data }) => {
     const swiperRef = useRef(null);
     const blogs = data?.blogs || [];

@@ -38,6 +38,13 @@
     color: black;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: 500ms ease-in-out;
+
+}
+
+.MobileNavbaraTag:hover {
+    color: #ED145C;
+
 }
 
 a {

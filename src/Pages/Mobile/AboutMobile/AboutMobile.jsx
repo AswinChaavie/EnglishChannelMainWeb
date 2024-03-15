@@ -14,6 +14,7 @@ export const AboutMobile = () => {
         });
         AOS.refresh(); // Manually refresh AOS on route change
     }, [location.pathname]);
+
     return (
         <>
             <div className='AboutMobileAlign p-3'>
@@ -26,7 +27,7 @@ export const AboutMobile = () => {
                     <div data-aos="fade-right"
                         data-aos-duration="1000"
                         className='AboutUsLastFlexAlgn'>
-                        <DoneIcon id="AboutUsLastIcon" />
+                        <DoneIcon id="MobileAboutUsLastIcon" />
                         <TextField data={{
                             style: "AboutMobileSecond_secFont", Text: "Counseling towards the right course and University. "
                         }} />
@@ -35,7 +36,7 @@ export const AboutMobile = () => {
                         data-aos-duration="1000"
                         className='AboutUsLastFlexAlgn'>
 
-                        <DoneIcon id="AboutUsLastIcon" />
+                        <DoneIcon id="MobileAboutUsLastIcon" />
                         <TextField data={{
                             style: "AboutMobileSecond_secFont", Text: "Assistance with pre-departure formalities."
                         }} />
@@ -43,7 +44,7 @@ export const AboutMobile = () => {
                     <div data-aos="fade-right"
                         data-aos-duration="1000"
                         className='AboutUsLastFlexAlgn'>
-                        <DoneIcon id="AboutUsLastIcon" />
+                        <DoneIcon id="MobileAboutUsLastIcon" />
                         <TextField data={{
                             style: "AboutMobileSecond_secFont", Text: "Personalized support  and accommodation suggestions at the destination."
                         }} />
@@ -52,9 +53,9 @@ export const AboutMobile = () => {
                     <div data-aos="fade-right"
                         data-aos-duration="1000"
                         className='AboutUsLastFlexAlgn'>
-                        <DoneIcon id="AboutUsLastIcon" />
+                        <DoneIcon id="MobileAboutUsLastIcon" />
                         <TextField data={{
-                            style: "AboutMobileSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."
+                            style: "AboutMobileSecond_secFont", Text: "Extended support to make sure your path to success is smooth and fulfilling."
                         }} />
                     </div>
                 </div>

@@ -73,22 +73,27 @@
 
 }
 
-.Countries2DivText {
-    font-size: 17px;
+.mobileCountries2DivText {
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.661);
     font-weight: bold;
     height: 10px;
+    letter-spacing: 1px;
 
 }
 
-.Countries2DivText2 {
-    font-size: 13px;
+.mobileCountries2DivText2 {
+    font-size: 17px;
     color: black;
-
 }
 
 .CountriesAlignDivImg {
     border-radius: 20px;
+}
+
+.mobileCountries2DivButtonAlign {
+    display: flex;
+    justify-content: center;
 }
 
 /* ImageWithGradient.css */
@@ -96,6 +101,10 @@
 @media screen and (max-width: 850px) {
     .HidePage {
         display: none;
+    }
+
+    .CountriesAlignText {
+        height: auto;
     }
 
     .CountriesAlignDivAlign {

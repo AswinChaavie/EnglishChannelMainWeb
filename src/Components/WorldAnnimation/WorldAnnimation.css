@@ -4,8 +4,17 @@
 }
 
 #yourThreeJSContainer {
-    margin: -150px -200px;
+    top: -150px;
+    right: 100px;
+    z-index: -9999;
+}
 
+.three-container {
+    touch-action: none;
+    /* Disable touch zooming on mobile devices */
+    user-zoom: fixed;
+    position: absolute;
+    /* Disable zooming on desktop browsers */
 }
 
 @media screen and (max-width: 1000px) {

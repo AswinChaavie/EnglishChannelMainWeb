@@ -7,6 +7,7 @@ import { Footer } from '../../../Components/Footer/Footer'
 import axios from 'axios'
 import { Loader } from '../../../Components/Loader/Loader'
 import { api } from '../../../config'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 export const BlogSec = () => {
     const [blogs, setblogs] = useState([])
     useEffect(() => {
@@ -17,14 +18,14 @@ export const BlogSec = () => {
         })
     }, [])
 
-    return (
+    return (    
         <>
+            <Navbar countrie={true} />
             {blogs.length > 0 ? <>
-                <Navbar countrie={true} />
                 <div className='BlogSecAlign'>
                     <div className='BlogSecSetText'>
                         <TextField data={{ style: "BlogSecSetTextField", Text: "Explore" }} />
-                        <span className='BlogSecSetTextFieldSpan'>Blogs</span>
+                        <span className='BlogSecSetTextFieldSpan'>Vlogs</span>
                     </div>
                     <div className='BlogSecFlexSet'>
                         {blogs.map(blog =>
@@ -46,6 +47,11 @@ export const BlogSec = () => {
                     </div>
                 </div>
                 <Footer />
+                <div className='floatingButton'>
+                    <a href='https://wa.me/918877222255' className='floatingButtonWhatsApp'>
+                        <WhatsAppIcon id="floatingButtonWhatsAppIcon" />
+                    </a>
+                </div>
             </>
                 :
                 <Loader />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./HomeMobile.css"
@@ -6,14 +6,24 @@ import { ImageField } from '../../../Components/MainComponents/ImageField'
 import { ButtonField } from '../../../Components/MainComponents/ButtonField'
 import { CounterBar } from '../../../Components/CounterBar/CounterBar'
 import { useLocation } from 'react-router-dom';
-export const HomeMobile = () => {
+import { EnquiryForm } from '../../../Components/EnquiryForm/EnquiryForm';
+export const HomeMobile = ({ data }) => {
     const location = useLocation();
     useEffect(() => {
         AOS.init({
             once: false,
         });
-        AOS.refresh(); 
+        AOS.refresh();
     }, [location.pathname]);
+    const [popup, setpopup] = useState(false)
+    const OpenPop = () => {
+        setpopup(true)
+        // return data.FnCall()
+    }
+
+    const close = () => {
+        setpopup(false)
+    }
     return (
         <>
             <div className=' HomeMobileALign p-4'>
@@ -33,9 +43,14 @@ export const HomeMobile = () => {
                     </div>
                 </div>
                 <div className='HomeMobButton'>
-                    <ButtonField data={{ style: "HomeMobButtonDes", text: "Talk to an expert" }} />
+                    <ButtonField data={{ style: "HomeMobButtonDes", text: "Talk to an expert", Fn: OpenPop }} />
                 </div>
-                <CounterBar />
+                {/* <CounterBar /> */}
+                {
+                    popup ?
+                        <EnquiryForm data={close} />
+                        : ""
+                }
             </div>
         </>
     )

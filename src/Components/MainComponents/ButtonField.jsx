@@ -13,13 +13,11 @@ export const ButtonField = ({ data: { style, text, designed, Fn, index } }) => {
     return (
         <>
             {designed ?
-                <button className="AboutUsAlignLetsButton">{text}</button>
+                <button onClick={() => { Fn(index) }} className="AboutUsAlignLetsButton">{text}</button>
                 :
                 <button onClick={() => { Fn(index) }} className={style}>{text}</button>
-
             }
 
         </>
     )
 }
-    

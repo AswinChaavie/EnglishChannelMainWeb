@@ -1,6 +1,6 @@
 .Home_align {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
 }
 
 .Home_font1 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     width: 90%;
 }
@@ -55,6 +55,7 @@ p {
     font-family: 'Quicksand', sans-serif;
     position: relative;
     z-index: 99;
+    border: none;
 }
 
 .Home_fontBtnalign {
@@ -74,7 +75,7 @@ p {
 }
 
 .homeSectionImage {
-    height: 400px;
+    height: 500px;
 }
 
 .Home_lastSecAlign {
@@ -135,5 +136,19 @@ p {
     .CounterText {
         font-size: 10px;
 
+    }
+
+    .homeSectionImage {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1358px) {
+    .homeSectionImage {
+        height: 400px;
+    }
+
+    .Home_font1 {
+        font-size: 35px;
     }
 }

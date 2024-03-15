@@ -86,7 +86,6 @@
 
 .NavbarSettingGap {
     display: flex;
-    width: 40%;
     justify-content: center;
     gap: 40px;
 }
@@ -140,17 +139,21 @@
     width: 100px;
     transition: 500ms ease-in-out;
     letter-spacing: 1px;
+    background-color: transparent;
+    margin: 00px -4px;
 }
 
 .NavbarText2Selection {
-    width: 120px;
     border: none;
-    text-wrap: nowrap;
     font-weight: 600;
+    width: min-content;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
     font-family: 'Quicksand', sans-serif;
-    color: rgba(255, 255, 255, 0.825);
-    background-color: black;
-    letter-spacing: 1px;
-    font-size: 17px;
+    width: 100px;
+    color: #ffffffde;
     transition: 500ms ease-in-out;
+    letter-spacing: 1px;
+    background-color: black;
+    margin: 00px -4px;
 }

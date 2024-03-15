@@ -6,8 +6,10 @@ import { InputField } from '../MainComponents/InputField'
 import { Search } from '@mui/icons-material'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useLocation, useNavigate } from 'react-router-dom'
-
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { country } from '../../StoreData'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify'
 function Navbar({ countrie }) {
     const location = useLocation();
     const navigate = useNavigate()
@@ -15,45 +17,45 @@ function Navbar({ countrie }) {
         AOS.init({
             once: false,
         });
-        AOS.refresh(); // Manually refresh AOS on route change
+        AOS.refresh();
+
     }, [location.pathname]);
+    const goPage = (sec) => {
+        console.log("sec>>>>>", sec)
+        navigate("/")
+    }
     return (
         <>
-
+        <ToastContainer/>
             <div className={countrie ? 'Navbar_align2 p-1' : 'Navbar_align p-1'} >
                 <div className='Navbar_adjst'>
                     <div className=''>
                         <a href="/">
-                            <ImageField data={{ ImgName: !countrie ? "logo (1) 1.png" : "Untitled-1.png", style: !countrie ? "NavbarLogo" : "NavbarLogo2" }} />
+                            <ImageField data={{ ImgName: !countrie ? "updateWhiteLogo.png" : "updatedLogo.png", style: !countrie ? "NavbarLogo" : "NavbarLogo2" }} />
                         </a>
                     </div>
                     <div className='NavbarSettingGap'>
-                        <a href="/#navigate_aboutUs">
+                        <a onClick={() => { goPage("contact us") }} href="#navigate_aboutUs">
                             <TextField data={{ Text: "About", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
                         <select value={location?.state} onChange={(e) => { navigate("/countries", { state: e.target.value }) }} className={countrie ? 'NavbarText2Selection2' : "NavbarText2Selection"} name="" id="">
                             <option disabled selected value="">
                                 <TextField data={{ Text: "Countries", style: countrie ? "NavbarText2" : "NavbarText" }} />
                             </option>
-                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="ca">Canada</option>
-                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="uk">United kingdom</option>
-                            <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value="nz">New Zealand</option>
+                            {country.map(country =>
+                                <option className={countrie ? 'Navbaroptions1' : "Navbaroptions"} value={country.country}>{country.country}</option>
+                            )}
+
                         </select>
-                        <a href="/#navigate_Courses">
+                        <a href="/TopCourses">
                             <TextField data={{ Text: "Courses", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
-                        <a href="/blogs">
-                            <TextField data={{ Text: "Blog", style: countrie ? "NavbarText2" : "NavbarText" }} />
+                        <a onClick={() => { navigate("/blogs") }}>
+                            <TextField data={{ Text: "Vlog", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
-                        <a href="/#navigate_ContactUs">
+                        <a href="#navigate_ContactUs" onClick={() => { goPage("contact us") }} >
                             <TextField data={{ Text: "Contact", style: countrie ? "NavbarText2" : "NavbarText" }} />
                         </a>
-                    </div>
-                    <div className='NavbarSettingGap2'>
-                        <InputField data={{ type: "text", style: "NavbarinpField p-2", palaceholder: "Search Your Institution" }} />
-                        <div className='NavbarSearch_icon'>
-                            <Search id="NavbarOGICon" />
-                        </div>
                     </div>
                 </div>
             </div >

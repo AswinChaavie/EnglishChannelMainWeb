@@ -69,7 +69,38 @@
     color: black;
     font-weight: bold;
 }
-.CalculatorAlignSecCo{
+
+.CalculatorAlignSecCo {
     font-size: 16px;
     color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    .CalculatorAlign {
+        flex-direction: column;
+    }
+
+    .CalculatorAlignSec {
+        width: 100%;
+    }
+
+    .CalculatorAlignSec2 {
+        width: 100%;
+    }
 }

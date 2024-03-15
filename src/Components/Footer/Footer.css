@@ -8,11 +8,13 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
 .FooterAlignmentImgs {
-    height: 60px;
+    height: 100px;
 }
 
 .FooterAlignmentIText {
@@ -24,7 +26,6 @@
 .FooterAlignmentIText2 {
     color: rgba(255, 255, 255, 0.673);
     font-size: 17px;
-    width: 300px;
     line-height: 40px;
 }
 
@@ -36,31 +37,104 @@
 .FooterAlignmentSec2 {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
 }
 
 .FooterAlignmentSec3 {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 40%;
+    gap: 20px;
+}
+
+.FooterAlignmentDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.FooterAlignFInalSecAlign {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: black;
+    align-items: center;
+    height: 100px;
 }
 
 .FooterAlignSec3Social {
     display: flex;
     width: 100%;
-    gap: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.footerMapStyle {
+    height: 100%;
+    width: 100%;
+}
+
+.google-map-code {
+    height: 200px;
 }
 
 #FooterAlignSec3SocialIcon {
-    font-size: 30px;
+    font-size: 40px;
     color: #ED145C;
     border-radius: 50%;
 }
 
+.FootercopyRightsptag {
+    color: rgba(255, 255, 255, 0.708);
+    font-size: 15px;
+}
+
+.FootercopyRights {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FootercopyRightsChaavie {
+    color: rgba(255, 255, 255, 0.83);
+    border-bottom: 1px solid blue;
+    transition: 0.5s;
+}
+
+.FootercopyRightsChaavie:hover {
+    color: rgba(0, 47, 255, 0.83);
+
+}
+
+.FooterAlignmentIText3 {
+    font-size: 20px;
+    color: #ED145C;
+}
+
+.FooterAlignmentImob {
+    display: none;
+}
+
+.FooterAlignmentButton {
+    width: 120px;
+    padding: 5px;
+    color: #ED145C;
+    border: 1px solid #ED145C;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.FooterAlignmentButton:hover {
+    background-color: #ED145C;
+    color: white;
+}
+
 @media screen and (max-width: 1000px) {
-    .FooterAlignSec3Social {
-        gap: 10px;
-    }
+   
 }
 
 @media screen and (max-width: 750px) {
@@ -68,15 +142,38 @@
         flex-direction: column;
     }
 
+    .FooterAlignmentImob {
+        display: block;
+        color: white;
+        font-size: 20px;
+        text-align: start;
+    }
+
     .FooterAlignmentSec {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+
+    .FooterAlignFInalSecAlign {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .FooterAlignmentSec {
+        align-items: flex-start;
     }
 
     .FooterAlignmentImgs {
         height: 50px;
+    }
+
+    .FootercopyRightsptag {
+        color: rgba(255, 255, 255, 0.708);
+        font-size: 17px;
+        padding: 10px;
+        text-align: center;
     }
 
     .FooterAlignmentImgAlign {
@@ -98,6 +195,8 @@
         flex-direction: column;
         align-items: center;
     }
+
+
 
     .FooterAlignSec3Social {
         justify-content: center;

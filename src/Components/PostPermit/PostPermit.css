@@ -1,0 +1,35 @@
+.PostPermitAlign {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.PostPermitTextField {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.PostPermitUl {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 0.5px;
+}
+
+.PostPermitHtag {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 850px) {
+    .PostPermitHtag{
+        font-size: 20px;
+    }
+    .PostPermitUl{
+        font-size: 17px;
+    }
+}

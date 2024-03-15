@@ -2,10 +2,21 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    justify-content: space-around;
     gap: 60px;
+}
+
+.AdmissionCardSec1,
+.AdmissionCardSec2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.AdmissionCardSec1,
+.AdmissionCardSec2,
+.AdmissionCardSec1 > .AdmissionCardFront,
+.AdmissionCardSec2 > .AdmissionCardFront {
+    min-height: 500px; /* Adjust this value as needed */
 }
 
 .AdmissionTextField {
@@ -15,54 +26,29 @@
 }
 
 .AdmissionCardSec1 {
-    width: 50%;
-    height: 90%;
     background-image:
         linear-gradient(to bottom, rgba(17, 17, 18, 0.627), rgba(0, 0, 0, 0.742)),
         url("../../../public/Images/2808170_18433.jpg");
     object-fit: cover;
     background-size: cover;
-    align-items: center;
     gap: 10px;
-    border-radius:6px;
+    border-radius: 6px;
 }
 
 .AdmissionCardSec2 {
-    width: 50%;
-    height: 90%;
     background-image:
         linear-gradient(to bottom, rgba(17, 17, 18, 0.627), rgba(0, 0, 0, 0.742)),
         url("../../../public/Images/group-students-celebrating-graduation-together-wearing-face-masks.jpg");
     object-fit: cover;
     background-size: cover;
-    align-items: center;
     gap: 10px;
     border-radius: 6px;
 }
 
-.AdmissionInnerCard1 {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    height: 90%;
-    align-items: center;
-}
-
-.AdmissionInnerCard2 {
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-    height: 90%;
-    align-items: flex-start;
-
-    gap: 30px;
-}
-
-.AdmissionImg {
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-    object-fit: cover;
+.AdmissionCardFrontText {
+    font-size: 20px;
+    color: #ED145C;
+    height: 15px;
 }
 
 .AdmissionCardFront {
@@ -76,14 +62,10 @@
 }
 
 .AdmissionCardFrontText {
-    font-size: 20px;
     color: #ED145C;
-    height: 15px;
-}
-
-#AdmissionCardFrontArrow {
-    font-size: 30px;
-    color: #ED145C;
+    font-size: 29px;
+    height: 50px;
+    font-weight: bold;
 }
 
 .AdmissionCardFrontLi {
@@ -93,18 +75,13 @@
     line-height: 35px;
 }
 
-.AdmissionCardFrontText {
-    color: #ED145C;
-    font-size: 29px;
-    height: 50px;
-    font-weight: bold;
-}
+@media screen and (max-width: 850px) {
+    .AdmissionAlign {
+        flex-direction: column;
+    }
 
-.AdmissionCardSecmyCard {
-    width: 100%;
-    display: flex;
-}
-
-.frontSide {
-    height: 50%;
+    .AdmissionCardSec1,
+    .AdmissionCardSec2 {
+        width: 100%;
+    }
 }

@@ -16,13 +16,233 @@
     top: 0;
 }
 
+.landingViewPop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.landingViewPopInner {
+    width: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.landingViewPopInner2 {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.landingViewLogo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#landingViewPopClsLogo {
+    font-family: 20px;
+    color: white;
+}
+
+.landingViewPopClsLogoDiv {
+    background-color: #ED145C;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.landingViewSections {
+    display: flex;
+}
+
+.landingViewSecImg {
+    object-fit: cover;
+    width: 70%;
+}
+
+.landingView1sec {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.landingViewInputs {
+    display: flex;
+    gap: 10px;
+}
+
+.landingView1Ptag {
+    font-size: 30px;
+    color: black;
+    height: 20px;
+}
+
+.landingViewInputsField {
+    height: 40px;
+    border-radius: 10px;
+    background-color: #444444;
+    color: white;
+    width: 100%;
+}
+
+.landingViewInputsDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.landingViewTextArea {
+    max-height: 100px;
+    border-radius: 10px;
+    background-color: #444444;
+    color: white;
+    width: 100%;
+}
+
+.landingViewSubmit {
+    height: 40px;
+    width: 100%;
+    background-color: #ED145C;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.landingViewInputlabel {
+    height: 30px;
+}
+
+.landingView1Text {
+    font-size: 20px;
+    color: black;
+}
+
+.landingView1Span {
+    color: #ED145C;
+    animation: heartbeat 1s ease-in-out infinite;
+    /* Apply the heartbeat animation */
+}
+
+.floatingButton {
+    width: 100%;
+    padding: 0px 50px 0px 50px;
+    position: fixed;
+    z-index: 999999999999;
+    display: flex;
+    justify-content: end;
+    bottom: 70px;
+}
+
+#floatingButtonWhatsAppIcon {
+    font-size: 50px;
+    color: rgb(5, 213, 5);
+}
+
+.floatingButtonWhatsApp {
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: heartbeat 2s infinite;
+    background-color: white;
+}
+
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.landingViewPopImg {
+    height: 30px;
+}
+
+.landingViewPopInner2 {
+    display: flex;
+}
 
 @media screen and (max-width: 750px) {
     .responsiveWeb {
         display: none;
     }
 
+    .floatingButtonWhatsApp {
+        padding: 5px;
+    }
+
+    .landingViewPopMargin {
+        margin: 50px 00px;
+    }
+
+    .floatingButton {
+        bottom: 40px;
+    }
+
+    #floatingButtonWhatsAppIcon {
+        font-size: 30px;
+    }
+
+    .landingViewPopInner {
+        display: block;
+        height: 100vh;
+        overflow: scroll;
+        border-radius: 0px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .landingView1Ptag {
+        font-size: 25px;
+    }
+
+    .landingView1Text {
+        font-size: 16px
+    }
+
+    .landingViewSections {
+        flex-direction: column;
+    }
+
+    .landingView1sec {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .responsiveMobile {
         display: block;
     }
+
+    .landingViewPopInner {
+        width: 100%;
+    }
+
+    .landingViewInputs {
+        width: 100%;
+    }
+
 }

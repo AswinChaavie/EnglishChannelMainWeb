@@ -19,11 +19,11 @@
 }
 
 .CoursesMobileButton {
-    width: 100%;
-    height: 50px;
     background-color: #ED145C;
     color: white;
     border: none;
     border-radius: 6px;
     letter-spacing: 1px;
-}
+    padding: 10px;
+    font-size: 12px;
+}   

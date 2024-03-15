@@ -23,14 +23,10 @@ export const Courses = () => {
                     <TextField data={{ style: "TCoursesAlignText", Text: "Courses" }} />
                 </div>
                 <div className='CoursesSectionAlign'>
-                    <div data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in-sine" className='CoursesAlignSec'>
+                    <div className='CoursesAlignSec'>
                         <SwiperSliders Courses={true} />
                     </div>
-                    <div data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in-sine" className='CoursesAlignSec'>
+                    <div className='CoursesAlignSec'>
                         <ImageField data={{ style: "CoursesAlignSecImg", ImgName: "Group 1.png" }} />
                     </div>
                 </div>

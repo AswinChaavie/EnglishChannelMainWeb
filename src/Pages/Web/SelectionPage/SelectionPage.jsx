@@ -3,14 +3,16 @@ import "./SelectionPage.css";
 import { ButtonField } from '../../../Components/MainComponents/ButtonField';
 import { Admission } from '../../../Components/AdmissionRequirement/Admission';
 import { Calculator } from '../../../Components/Calculator/Calculator';
+import { PostPermit } from '../../../Components/PostPermit/PostPermit';
+import { HighAcademic } from '../../../Components/HighAcademicStandards/HighAcademic';
 
-export const SelectionPage = () => {
-    const ButtonData = ["Admission Requirements", "Expense Calculator", "Post Work Permit Opportunity", "High academic Standards"];
+export const SelectionPage = ({ data }) => {
+    const ButtonData = ["Admission Requirements", "Expense Details", "Post work permit opportunity", "High academic standards"];
     const [activeButton, setActiveButton] = useState(1);
     const conditionChange = (index) => {
         setActiveButton(index);
     };
-
+    console.log("checking countryydata ====>", data.data.country)
     return (
         <>
             <div className="SelectionAlign p-5">
@@ -40,8 +42,15 @@ export const SelectionPage = () => {
                         ))}
                     </div>
                     <div className='SelectionUnderField p-3'>
-                        {activeButton === 1 ? <Admission /> :
-                            activeButton === 2 ? <Calculator /> : ""
+                        {activeButton === 1 ? <Admission data={{ masters: data?.data?.masters, bachelors: data?.data?.bachelors }} /> :
+                            activeButton === 2 ? <Calculator data={data} /> :
+                                activeButton === 3 ? <PostPermit data={{
+                                    data: data.data.postPermitOpportunity
+                                }} /> :
+                                    activeButton === 4 ? <HighAcademic data={{
+                                        data: data.data.highAcademicStandard
+                                    }} /> : ""
+
                         }
                     </div>
                 </div>

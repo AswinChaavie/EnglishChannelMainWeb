@@ -1,5 +1,4 @@
 .ExpertAdviceAdjst {
-    height: 150px;
     width: 60%;
     border-radius: 20px;
     background-color: black;
@@ -26,27 +25,43 @@
     background-color: #ED145C;
     letter-spacing: 2px;
     border-radius: 6px;
+    border: none;
 }
 
 .ExpertAdviceAdjstImg {
     height: 80px;
     margin: -200px 00px;
 }
+#swiperInnerBoxeIocns{
+    font-size: 25px;
+    color: #ED145C;
+}
 
 .ExpertAdviceAdjstFinal {
     display: flex;
     width: 100%;
     height: auto;
+    gap: 100px;
 }
+
 .ExpertAdviceBTnDiv {
     display: flex;
     justify-content: flex-start;
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .ExpertAdviceText {
         font-size: 15px;
+    }
+
+    .ExpertAdviceText {
+        font-size: 15px;
+
+    }
+
+    .ExpertAdviceAdjst {
+        height: auto;
     }
 }
 
@@ -82,7 +97,7 @@
         background-color: transparent;
         gap: 20px;
     }
-  
+
     .ExpertAdviceAdjst {
         padding: 00px;
         background-color: transparent;

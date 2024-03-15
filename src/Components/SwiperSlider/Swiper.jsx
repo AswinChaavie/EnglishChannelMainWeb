@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -14,16 +11,27 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { courses } from '../../StoreData';
+
 export default function SwiperSliders({ Courses, mobile }) {
     const location = useLocation();
-
+    const navigate = useNavigate()
     useEffect(() => {
         AOS.init({
             once: false,
         });
         AOS.refresh(); // Manually refresh AOS on route change
     }, [location.pathname]);
+
+    // Group courses into sets of three
+    const groupedCourses = [];
+    for (let i = 0; i < courses.length; i += 3) {
+        groupedCourses.push(courses.slice(i, i + 3));
+    }
+    const fnForNavigate = () => {
+        navigate("/TopCourses")
+    }
     return (
         <>
             {!Courses ?
@@ -297,140 +305,47 @@ export default function SwiperSliders({ Courses, mobile }) {
                     }
                 </>
                 :
-                <>
-                    {/* WebCourseSlider */}
-                    <div className='swiperAdjstAlign2'>
-                        <Swiper
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation={{
-                                nextEl: '.custom-next-button',
-                                prevEl: '.custom-prev-button',
-                            }}
-                            // history={{
-                            //     key: 'slide',
-                            // }}
-                            modules={[Navigation, Pagination, History]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide data-history="1">
+                <div className='swiperAdjstAlign2'>
+                    <Swiper
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation={{
+                            nextEl: '.custom-next-button',
+                            prevEl: '.custom-prev-button',
+                        }}
+                        modules={[Navigation, Pagination, History]}
+                        className="mySwiper"
+                    >
+                        {groupedCourses.map((group, index) => (
+                            <SwiperSlide key={index} data-history={index + 1}>
                                 <div className='swiperCoursesSetting'>
-                                    <div className='swiperCoursesSecAlgn'
-                                    >
-                                        <div className='swiperCourseSecSettings'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 39.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
+                                    <div className='swiperCoursesSecAlgn'>
+                                        {group.map((course, idx) => (
+                                            <div key={idx} className={`swiperCourseSecSettings${idx + 1}`}>
+                                                <div className='swiperCoursesSection p-2'>
+                                                    <div className='swiperCoursesSectionImg'>
+                                                        <ImageField data={{ style: "swiperCoursesimg1", ImgName: course.img }} />
+                                                    </div>
+                                                    <div className='swiperCoursesInnerSec'>
+                                                        <TextField data={{ style: "swiperCoursesText", Text: course.courseName }} />
+                                                        <div className='swiperCoursesinnexBtn'>
+                                                            <button onClick={fnForNavigate} className="cta">
+                                                                <span>Explore</span>
+                                                                <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
+                                                                    <path d="M1,5 L11,5"></path>
+                                                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className='swiperCourseSecSettings2'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 36.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='swiperCourseSecSettings3'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 37.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide data-history="2">
-                                <div className='swiperCoursesSetting'>
-                                    <div className='swiperCoursesSecAlgn'
-                                    >
-                                        <div className='swiperCourseSecSettings'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 39.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='swiperCourseSecSettings2'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 36.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='swiperCourseSecSettings3'>
-                                            <div className='swiperCoursesSection p-2'>
-                                                <ImageField data={{ style: "swiperCoursesimg1", ImgName: "Rectangle 37.png" }} />
-                                                <div className='swiperCoursesInnerSec'>
-                                                    <TextField data={{ style: "swiperCoursesText", Text: "Business Management" }} />
-                                                    <div className='swiperCoursesinnexBtn'>
-                                                        <button class="cta">
-                                                            <span>Explore</span>
-                                                            <svg className='swiperInnerBoxeSvg' viewBox="0 0 13 10" height="10px" width="15px">
-                                                                <path d="M1,5 L11,5"></path>
-                                                                <polyline points="8 1 12 5 8 9"></polyline>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
-                    </div>
+                        ))}
+                    </Swiper>
                     <div data-aos="fade-zoom-in"
                         data-aos-easing="ease-in-back"
                         data-aos-delay="300"
@@ -438,8 +353,7 @@ export default function SwiperSliders({ Courses, mobile }) {
                         <button className="custom-prev-button"><ArrowBackIcon /></button>
                         <button className="custom-next-button"><ArrowForwardIcon id="swiperPreFontSet" /></button>
                     </div>
-                    {/* End WebCourseSlider */}
-                </>
+                </div>
 
             }
         </>

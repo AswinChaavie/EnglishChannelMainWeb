@@ -1,6 +1,6 @@
 .AboutMobileAlignText {
     color: black;
-    font-size: 30px;
+    font-size: 25px;
 
 }
 
@@ -12,20 +12,23 @@
 
 .AboutMobileAlignText2 {
     color: #ED145C;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .AboutMobileSecond_secFont {
-    font-size: 17px;
+    font-size: 15px;
     color: black;
     line-height: 23px;
 }
 
 .AboutMobileAlignImage {
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
-
+#MobileAboutUsLastIcon{
+    color: #ED145C;
+    font-size: 25px;
+}
 .AboutMobileImgAlign {
     width: 100%;
     display: flex;

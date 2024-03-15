@@ -1,0 +1,12 @@
+.FlowChart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.FlowChartImg {
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+
+}

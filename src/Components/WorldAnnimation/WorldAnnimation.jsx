@@ -8,8 +8,8 @@ import { MeshSurfaceSampler } from "three/examples/jsm/math/MeshSurfaceSampler.j
 import "./WorldAnnimation.css";
 
 const WorldAnimation = () => {
+
     useEffect(() => {
-        console.clear();
         window.THREE = THREE;
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, 640 / 380, 0.1, 1000); // Set initial aspect ratio
@@ -29,9 +29,10 @@ const WorldAnimation = () => {
         const group = new THREE.Group();
         scene.add(group);
         group.rotation.y = 1;
-
+        window.addEventListener("resize", onWindowResize, false);
         let subgroups = [];
-
+        container.style.touchAction = "none";
+        container.style.userZoom = "fixed";
         let airplane = new THREE.Group();
         new OBJLoader().load("https://assets.codepen.io/127738/Airplane_model2.obj", (obj) => {
             airplane = obj;
@@ -130,17 +131,16 @@ const WorldAnimation = () => {
                     path.update();
                 }
             });
-
-            controls.update();
+            controls.update(); // Re-enable for zooming
             renderer.render(scene, camera);
         }
 
         window.addEventListener("resize", onWindowResize, false);
         function onWindowResize() {
-            const newAspect = container.offsetWidth / container.offsetHeight;
-            camera.aspect = newAspect;
-            camera.updateProjectionMatrix();
-            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            // const newAspect = container.offsetWidth / container.offsetHeight;
+            // camera.aspect = newAspect;
+            // camera.updateProjectionMatrix();
+            // renderer.setSize(container.offsetWidth, container.offsetHeight);
         }
     }, []);
 

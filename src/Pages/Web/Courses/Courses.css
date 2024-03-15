@@ -1,6 +1,5 @@
 .CoursesAlign {
     width: 100%;
-    height: 100vh;
 
 }
 
@@ -22,6 +21,7 @@
     font-weight: bold;
     text-align: center;
     height: 100px;
+    
 }
 
 .CoursesAlignTextSec {
@@ -32,11 +32,17 @@
     display: flex;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .CoursesAlignSecImg {
         height: 300px;
     }
-    .swiperCoursesText{
+
+    .swiperCoursesText {
         font-size: 14px;
     }
+
+    .CoursesAlign {
+        height: auto;
+    }
+
 }

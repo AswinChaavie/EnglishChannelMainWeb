@@ -1,0 +1,28 @@
+.WebCountry {
+    display: block;
+}
+
+.MobileCountry {
+    display: none;
+}
+
+.WebCountryToast {
+    display: flex;
+    z-index: 99999999999999;
+    position: absolute;
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+
+    .MobileCountry {
+        display: block;
+    }
+
+    .WebCountry {
+        display: none;
+    }
+
+}
