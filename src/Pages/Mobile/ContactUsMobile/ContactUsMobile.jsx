@@ -57,7 +57,7 @@ export const ContactUsMobile = () => {
                 });
             })
         } else {
-            toast.success('all fields are require ', {
+            toast.success('All fields are mandatory', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: true,

@@ -1,0 +1,159 @@
+.ContactUsAlign {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.ContactUsAlignSec1 {
+    width: 40%;
+    height: 400px;
+
+}
+
+.ContactUsAlignSec1Img {
+    height: 400px;
+}
+
+.ContactUsAlignSec2 {
+    width: 40%;
+    height: 400px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ContactUsAlignSec2Contact {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.ContactUsAlignSec2Inp {
+    width: 60%;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgba(222, 222, 222, 0.76);
+    border: none;
+}
+
+.ContactUsAlignSec2Text {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    height: 80px;
+}
+
+.ContactUsAlignSec2Inp2 {
+    width: 75%;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgba(222, 222, 222, 0.76);
+    border: none;
+}
+
+.ContactUsAlignSec2Inp3 {
+    width: 85%;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgba(222, 222, 222, 0.76);
+    border: none;
+}
+
+.ContactUsAlignSec2Inp4 {
+    width: 95%;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgba(222, 222, 222, 0.76);
+    border: none;
+}
+
+.ContactUsAlignSec3 {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ContactUsAlignSec3Img {
+    height: 200px;
+}
+
+.ContactUsAlignSec2BUtton {
+    width: 150px;
+    border: none;
+    background-color: #ED145C;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.ContactUsSecImg {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ContactUsAlignLastSec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ContactUsAlignSec {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .ContactUsAlignSec1Img {
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .ContactUsAlignSec1Img {
+        height: 300px;
+    }
+
+    .ContactUsAlignSec3Img {
+        height: 160px;
+    }
+
+    .ContactUsAlignSec1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ContactUsAlignSec2Inp {
+        height: 30px;
+    }
+
+    .ContactUsAlignSec2Inp2 {
+        height: 30px;
+    }
+
+    .ContactUsAlignSec2Inp3 {
+        height: 30px;
+    }
+}

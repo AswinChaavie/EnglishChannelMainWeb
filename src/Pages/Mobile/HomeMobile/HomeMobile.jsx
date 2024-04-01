@@ -4,7 +4,6 @@ import 'aos/dist/aos.css';
 import "./HomeMobile.css"
 import { ImageField } from '../../../Components/MainComponents/ImageField'
 import { ButtonField } from '../../../Components/MainComponents/ButtonField'
-import { CounterBar } from '../../../Components/CounterBar/CounterBar'
 import { useLocation } from 'react-router-dom';
 import { EnquiryForm } from '../../../Components/EnquiryForm/EnquiryForm';
 export const HomeMobile = ({ data }) => {
@@ -26,6 +25,9 @@ export const HomeMobile = ({ data }) => {
     }
     return (
         <>
+        {
+            
+        }
             <div className=' HomeMobileALign p-4'>
                 <p className='HomeMob_font1'>Get Your passport to <span data-aos="fade-down" className='HomeSpan'>Excellence </span>
                     <br />

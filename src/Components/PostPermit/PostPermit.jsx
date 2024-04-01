@@ -19,7 +19,7 @@ export const PostPermit = ({ data }) => {
                 {data?.data?.map(postData =>
                     <>
                         {postData?.title ?
-                            <h3 data-aos="fade-right" className='PostPermitHtag'>{postData.title}</h3>
+                            <h4 data-aos="fade-right" className='PostPermitHtag'>{postData.title}</h4>
                             : " "
                         }
                         {

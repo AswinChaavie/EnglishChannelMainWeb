@@ -7,12 +7,11 @@ import { PostPermit } from '../../../Components/PostPermit/PostPermit';
 import { HighAcademic } from '../../../Components/HighAcademicStandards/HighAcademic';
 
 export const SelectionPage = ({ data }) => {
-    const ButtonData = ["Admission Requirements", "Expense Details", "Post work permit opportunity", "High academic standards"];
+    const ButtonData = ["Admission Requirements", "Expense Details", "Post-Study Work Opportunity", `Why ${data.data.country} ?`];
     const [activeButton, setActiveButton] = useState(1);
     const conditionChange = (index) => {
         setActiveButton(index);
     };
-    console.log("checking countryydata ====>", data.data.country)
     return (
         <>
             <div className="SelectionAlign p-5">

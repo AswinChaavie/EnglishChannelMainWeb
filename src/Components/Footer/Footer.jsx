@@ -24,7 +24,7 @@ export const Footer = () => {
                         <div>
                             <TextField data={{ style: "FooterAlignmentIText", Text: "Head Office" }} />
                             <p className='FooterAlignmentIText2'>
-                                1St Floor, Park View Complex,
+                                1 st Floor, Park View Complex,
                                 <br />
                                 Cherooty Road, Opposite Gandhi Park,
                                 <br />

@@ -4,7 +4,6 @@ import Navbar from '../../Components/Navbar/Navbar'
 import { Home } from '../Web/Home/Home'
 import { AboutUs } from '../Web/AbouUs/AboutUs'
 import { Courses } from '../Web/Courses/Courses'
-import { ContactUs } from '../Web/ContactUs/ContactUs'
 import { StudentsLove } from '../Web/StudentsLove/StudentsLove'
 import { Footer } from '../../Components/Footer/Footer'
 import { HomeMobile } from '../Mobile/HomeMobile/HomeMobile'
@@ -19,9 +18,9 @@ import axios from 'axios'
 import { api } from '../../config'
 import { FlowChart } from '../Web/FlowChart/FlowChart'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { NewContactForm } from '../Web/NewContactForm/NewContactForm'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify'
+import { ContactUs2 } from '../Web/ContactUs2/ContactUs2'
 // import { motion, useScroll, useTransform } from 'framer-motion'
 export const LandingView = () => {
     const [blogs, setblogs] = useState([])
@@ -77,7 +76,7 @@ export const LandingView = () => {
                 <br />
 
                 <section id='navigate_ContactUs'>
-                    <NewContactForm />
+                    <ContactUs2 />
                 </section>
                 <br />
 

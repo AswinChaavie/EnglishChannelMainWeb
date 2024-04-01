@@ -24,7 +24,7 @@ export const Countries = ({ data }) => {
     const Temp = [
         {
             name: "UNIVERSITIES",
-            count: `${CountryData?.universityCount} plus`,
+            count: `${CountryData?.universityCount} +`,
             icon: <AccountBalanceIcon id="CountriesICon" />
         },
         {
@@ -84,7 +84,7 @@ export const Countries = ({ data }) => {
         <>
             {location?.state === CountryData?.country ? <div className='HidePage'>
                 <div className='CountriesAlign p-5'>
-                    <TextField data={{ style: "CountriesAlignText", Text: `Study in ${CountryData.country}` }} />
+                    <p className='CountriesAlignText'>Study in <span className='CountriesPtagColor'>{CountryData.country}</span></p>
                     <div className='CountriesAlignDivAlign'>
                         <div className='CountriesAlignDivSec'>
                             <ImageField data={{ ImgName: "countrypageimg.jpg", style: "CountriesAlignDivImg" }} />

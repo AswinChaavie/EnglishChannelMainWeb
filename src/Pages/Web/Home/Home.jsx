@@ -35,6 +35,14 @@ export const Home = () => {
         <>
             <ToastContainer />
             <>
+                {/* <div className='Home_VideoPlayer'>
+                    <video className='Home_Video' loop muted autoPlay>
+                        <source src="./images/landingBackground.mp4" type="video/mp4" />
+                        {/* <source src="./images/lanidngVideo.mp4" type="video/mp4" /> */}
+                {/* Your browser does not support the video tag. */}
+                {/* </video>
+                    <div className="video-overlay"></div>  */}
+                {/* </div>  */}
                 <div className='Home_align p-5'>
                     <div className='home_sectionSettings'>
                         <div className='homeSec_setting'>
@@ -60,7 +68,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <ImageField data={{ style: "Home_FlightAlgn", ImgName: "backFlight.png" }} />
+                        {/* <ImageField data={{ style: "Home_FlightAlgn", ImgName: "backFlight.png" }} /> */}
                     </div>
                 </div>
                 <div className='Home_lastButtomCntnt'>

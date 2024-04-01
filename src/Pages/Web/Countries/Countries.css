@@ -3,16 +3,15 @@
 }
 
 .CountriesAlignText {
-    font-size: 40px;
+    font-size: 30px;
     color: black;
-    font-weight: 900;
+    font-weight: 600;
     height: 100px;
 }
 
 .CountriesAlignDivAlign {
     display: flex;
     width: 100%;
-
 }
 
 .CountriesAlignDivSec {
@@ -94,6 +93,17 @@
 .mobileCountries2DivButtonAlign {
     display: flex;
     justify-content: center;
+}
+
+.CountriesPtagColor {
+    color: #ED145C;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.ContactUsAlignSecText {
+    color: red;
+    font-size: 10px;
 }
 
 /* ImageWithGradient.css */

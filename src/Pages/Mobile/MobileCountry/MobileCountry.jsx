@@ -22,6 +22,7 @@ import { InfinityScroll } from '../../../Components/InfinityScroll/InfinityScrol
 import { Footer } from '../../../Components/Footer/Footer';
 import { TopCourses } from '../../Web/TopCourses/TopCourses';
 import { EnquiryForm } from '../../../Components/EnquiryForm/EnquiryForm';
+import { Loader } from '../../../Components/Loader/Loader';
 export const MobileCountry = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [CountryData, setCountryData] = useState({
@@ -81,78 +82,82 @@ export const MobileCountry = () => {
     }
     return (
         <>
-            <div className='MobileCountryAlign'>
-                <MobileNavbar />
-                <div className='mobileCountriesAlign'>
-                    <TextField data={{ style: "mobileCountriesAlignText", Text: `Study in ${CountryData.country}` }} />
-                    <div className='mobileCountriesAlignDivAlign'>
-                        <div className='mobileCountriesAlignDivSec'>
-                            <ImageField data={{ ImgName: "countrypageimg.jpg", style: "mobileCountriesAlignDivImg" }} />
-                        </div>
-                        <div className='mobileCountriesAlign2DivSec'>
-                            <TextField data={{ style: "mobileCountriesAlign2DivText", Text: CountryData.des }} />
-                            <TextField data={{ style: "mobileCountriesAlign2DivText2", Text: "Quick Facts" }} />
-                            <div className='mobileCountriesAlign2DivFact'>
-                                {Temp.map((ele) => (
-                                    <div data-aos="fade-right" key={ele.name} className='mobileCountriesAlign2DivInner'>
-                                        <div className='mobileCountriesAlign2DivRnd'>
-                                            {ele.icon}
+            {location?.state === CountryData?.country ?
+                <div className='MobileCountryAlign'>
+                    <MobileNavbar />
+                    <div className='mobileCountriesAlign'>
+                        <TextField data={{ style: "mobileCountriesAlignText", Text: `Study in ${CountryData.country}` }} />
+                        <div className='mobileCountriesAlignDivAlign'>
+                            <div className='mobileCountriesAlignDivSec'>
+                                <ImageField data={{ ImgName: "countrypageimg.jpg", style: "mobileCountriesAlignDivImg" }} />
+                            </div>
+                            <div className='mobileCountriesAlign2DivSec'>
+                                <TextField data={{ style: "mobileCountriesAlign2DivText", Text: CountryData.des }} />
+                                <TextField data={{ style: "mobileCountriesAlign2DivText2", Text: "Quick Facts" }} />
+                                <div className='mobileCountriesAlign2DivFact'>
+                                    {Temp.map((ele) => (
+                                        <div data-aos="fade-right" key={ele.name} className='mobileCountriesAlign2DivInner'>
+                                            <div className='mobileCountriesAlign2DivRnd'>
+                                                {ele.icon}
+                                            </div>
+                                            <TextField data={{ style: "mobileCountries2DivText", Text: ele.name }} />
+                                            <TextField data={{ style: "mobileCountries2DivText2", Text: ele.count }} />
                                         </div>
-                                        <TextField data={{ style: "mobileCountries2DivText", Text: ele.name }} />
-                                        <TextField data={{ style: "mobileCountries2DivText2", Text: ele.count }} />
-                                    </div>
-                                ))}
-                            </div>
-                            <div className='mobileCountries2DivButtonAlign'>
-                                <ButtonField data={{ designed: true, text: "Talk To An Expert", Fn: OpenPop }} />
+                                    ))}
+                                </div>
+                                <div className='mobileCountries2DivButtonAlign'>
+                                    <ButtonField data={{ designed: true, text: "Talk To An Expert", Fn: OpenPop }} />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='mobileCountriesGapSet'>
-                    <div>
-                        <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Admission Requirements" }} />
-                        <div className='mobileAdmissionUnder'></div>
+                    <div className='mobileCountriesGapSet'>
+                        <div>
+                            <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Admission Requirements" }} />
+                            <div className='mobileAdmissionUnder'></div>
+                        </div>
+                        <Admission data={{ masters: CountryData.masters, bachelors: CountryData.bachelors }} />
+                        <div>
+                            <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Expense Calculator" }} />
+                            <div className='mobileAdmissionUnder'></div>
+                        </div>
+                        <Calculator data={{ data: CountryData }} />
+                        {CountryData?.postPermitOpportunity ?
+                            <>
+                                <div>
+                                    <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Post-Study Work Opportunity" }} />
+                                    <div className='mobileAdmissionUnder'></div>
+                                </div>
+                                <PostPermit data={{
+                                    data: CountryData?.postPermitOpportunity
+                                }} />
+                            </>
+                            : ""}
+                        {CountryData?.highAcademicStandard ?
+                            <>
+                                <div>
+                                    <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: `Why ${CountryData?.country} ?` }} />
+                                    <div className='mobileAdmissionUnder'></div>
+                                </div>
+                                <HighAcademic data={{
+                                    data: CountryData?.highAcademicStandard
+                                }} />
+                            </>
+                            : ""}
+                        <InfinityScroll data={{ data: CountryData }} />
+                        <TopCourses />
                     </div>
-                    <Admission data={{ masters: CountryData.masters, bachelors: CountryData.bachelors }} />
-                    <div>
-                        <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Expense Calculator" }} />
-                        <div className='mobileAdmissionUnder'></div>
-                    </div>
-                    <Calculator data={{ data: CountryData }} />
-                    {CountryData?.postPermitOpportunity ?
-                        <>
-                            <div>
-                                <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "Post work permit opportunity" }} />
-                                <div className='mobileAdmissionUnder'></div>
-                            </div>
-                            <PostPermit data={{
-                                data: CountryData?.postPermitOpportunity
-                            }} />
-                        </>
-                        : ""}
-                    {CountryData?.highAcademicStandard ?
-                        <>
-                            <div>
-                                <TextField data={{ style: "mobileAdmissionReqTextAlign", Text: "High academic standards" }} />
-                                <div className='mobileAdmissionUnder'></div>
-                            </div>
-                            <HighAcademic data={{
-                                data: CountryData?.highAcademicStandard
-                            }} />
-                        </>
-                        : ""}
-                    <InfinityScroll data={{ data: CountryData }} />
-                    <TopCourses />
-                </div>
 
-            </div>
+                </div>
+                :
+                <Loader />
+            }
             <Footer />
             {
-                        popup ?
-                            <EnquiryForm data={close} />
-                            : ""
-                    }
+                popup ?
+                    <EnquiryForm data={close} />
+                    : ""
+            }
         </>
     )
 }

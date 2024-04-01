@@ -6,7 +6,7 @@ import { Loader } from './Components/Loader/Loader';
 import { BlogSec } from './Pages/Web/BlogSec/BlogSec';
 import { CountryView } from './Pages/CountryView/CountryView';
 import { AllCourses } from './Pages/Web/AllCourses/AllCourses';
-import { NewContactForm } from './Pages/Web/NewContactForm/NewContactForm';
+import { ContactUs2 } from './Pages/Web/ContactUs2/ContactUs2';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path='/blogs' element={<BlogSec />} />
           <Route path='/countries' element={<CountryView />} />
           <Route path='/TopCourses' element={<AllCourses />} />
-          <Route path='/new' element={<NewContactForm />} />
+          <Route path='/contact' element={<ContactUs2 />} />
         </Routes>
       </BrowserRouter>
 

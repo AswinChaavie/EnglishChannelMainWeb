@@ -39,7 +39,7 @@ export const InfinityScroll = ({ data }) => {
                     </div>
                 </div>
                 <TextField data={{
-                    style: "InfinityScrollText2", Text: "Learn from top-class universities abroad with expert assistance from ENSLISH CHANNEL. We help you get admitted to the best universities!"
+                    style: "InfinityScrollText2", Text: "Learn from top-class universities abroad with expert assistance from ENGLISH CHANNEL. We help you get admitted to the best universities!"
                 }} />
                 <div className="InfinityScrollSwiper">
                     <Swiper

@@ -6,13 +6,13 @@ export const Admission = ({ data }) => {
     const BachelorsLevel = data?.bachelors;
     console.log("master>>>>", data)
     console.log("bachelors>>>>", data)
-    
+
     return (
         <>
             <div className='AdmissionAlign'>
                 <div className='AdmissionCardSec1 p-4'>
                     <TextField data={{
-                        style: "AdmissionCardFrontText", Text: "Bachelors Level"
+                        style: "AdmissionCardFrontText", Text: "Bachelor's Level"
                     }} />
                     <ul>
                         {BachelorsLevel?.map((ele, index) =>
@@ -22,7 +22,7 @@ export const Admission = ({ data }) => {
                 </div>
                 <div className='AdmissionCardSec2 p-4'>
                     <TextField data={{
-                        style: "AdmissionCardFrontText", Text: "Masters Level"
+                        style: "AdmissionCardFrontText", Text: "Master's Level"
                     }} />
                     <ul>
                         {mastersLevel?.map((ele, index) =>

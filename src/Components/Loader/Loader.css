@@ -17,6 +17,7 @@
 .loader .loaderSpan:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 0.3px #000000;
+
 }
 
 .loader .loaderSpan:nth-child(2) {
@@ -36,5 +37,16 @@
     50% {
         clip-path: polygon(0% 60%, 16% 65%, 34% 66%,
                 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .loader .loaderSpan:nth-child(2) {
+        text-align: center;
+    }
+
+    .loader .loaderSpan:nth-child(1) {
+        text-align: center;
     }
 }

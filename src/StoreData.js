@@ -2,21 +2,21 @@
 export const country = [
     {
         country: "United Kingdom (UK)",
-        des: "Engross yourself in the UK's vibrant cultural mosaic while pursuing studies at Global University. Delight in an assortment of diverse traditions, uncover historical landmarks, and soak up the energetic urban atmosphere.Immerse yourself in opportunities, gaining practical insights that seamlessly complement the excellence of your world-class education.",
+        des: "Engross yourself in the UK's vibrant cultural mosaic while pursuing studies at global university. Delight in an assortment of diverse traditions, uncover historical landmarks, and soak up the energetic urban atmosphere. Immerse yourself in opportunities, gaining practical insights that seamlessly complement the excellence of your world-class education.",
         highAcademicStandard: [{ h: "Studying in the UK is beneficial for international students in many ways. Many UK universities are famous for quality and excellence, making the country a standout choice for international students." },
         {
             li: ["Affordable Education", "Quality Educational Curriculum", "Innovative Training and Research Opportunities", "Best Immigration Possibilities", "International Exposure", "International students can work while studying"]
         }
         ],
         bachelors: [
-            "Academic Transcripts of 10th and 12th class", "English language test scores/ MOIF", "Birth certificate", "Passport", "Statement of Purpose", "Letter of Recommendation", "Curriculum Vitae"
+            "Academic Transcripts of 10th and 12th class", "English language test scores/MOI", "Birth certificate", "Passport", "Statement of Purpose", "Letter of Recommendation", "Curriculum Vitae"
         ],
         masters: [
-            "Academic Transcripts of 10th, 12th class, and All UG Certificates", "English language exam scores OR MOI", "Birth Certificate", "Passport", "Letter of Recommendation", "Copies of degree/diploma certificates, if applicable", "Statement of Purpose", "Curriculum Vitae (CV)/Resume"
+            "Academic Transcripts of 10th, 12th class, and All UG Certificates", "English language exam scores/MOI", "Birth Certificate", "Passport", "Letter of Recommendation", "Copies of degree/diploma certificates, if applicable", "Statement of Purpose", "Curriculum Vitae (CV)/Resume"
         ],
         postPermitOpportunity: [{
             title: ["Post permit opportunity"],
-            li: [" A Graduate visa lasts for 2 years. If you have a PhD or other doctoral qualification, it will last for 3 years.", " Your visa will start from the day your application is approved.", "Affordable cost of stud"]
+            li: [" A Graduate visa lasts for 2 years. If you have a PhD or other doctoral qualification, it will last for 3 years.", " Your visa will start from the day your application is approved.", "Affordable cost of study"]
         }],
         expense: [
             { h: ["You’ll need to show you have enough money to support yourself - unless you’ve been in the UK with a valid visa for at least 12 months on the date of your application."] },
@@ -25,13 +25,16 @@ export const country = [
             { h: ["If you’re boarding at a residential independent school, you’ll need to pay boarding fees instead. The amount you need to pay will be on your CAS."] },
             { h: ["London means the City of London and the 32 London boroughs."] }
         ],
-        university: ["Cambridge University", "Oxford University", "Imperial College London", "University College London (UCL)", "The University of Edinburgh", "The University of Manchester", "King's College London"],
-        intake: "3"
+        // university: ["Cambridge University", "Oxford University", "Imperial College London", "University College London (UCL)", "The University of Edinburgh", "The University of Manchester", "King's College London"],
+        intake: "3",
+        partime: "20",
+        visa: "2 year",
+        universityCount: "10"
 
     },
     {
         country: "United States of America (USA)",
-        des: "Step into a world where the old and the new converge seamlessly. Students have the opportunity to delve into the deep- rooted traditions of different American regions while staying at the forefront of innovation.Uncover the balance between preserving cultural heritage and embracing the future.",
+        des: "Step into a world where the old and the new converge seamlessly. Students have the opportunity to delve into the deep-rooted traditions of different American regions while staying at the forefront of innovation. Uncover the balance between preserving cultural heritage and embracing the future.",
         highAcademicStandard: [
             { h: "Affordability" },
             { content: "Various financial aid options help mitigate costs." },
@@ -54,10 +57,10 @@ export const country = [
 
         ],
         masters: [
-            "Letters of Recommendation", "Transcripts for bachelor’s degrees or equivalent", "Entrance exam scorecards – GRE / GMAT / MCAT / LSAT", "Proof of English language proficiency scores", "Statement of Purpose", "Passport", "Resume or CV", "Other academic transcripts", "Mark sheets and pass certificates", "Work experience letters (if any)", "Application confirmation copy", "Certificates for extra-curricular activities", "Application confirmation copy", "Proof of funds", "Research proposal / any portfolio (for any particular course)"
+            "Letters of Recommendation", "Transcripts for bachelor’s degrees or equivalent", "Entrance exam scorecards – GRE / GMAT / MCAT / LSAT", "Proof of English language proficiency scores", "Statement of Purpose", "Passport", "Resume or Curriculum Vitae(CV)/Resume", "Other academic transcripts", "Mark sheets and pass certificates", "Work experience letters (if any)", "Application confirmation copy", "Certificates for extra-curricular activities", "Application confirmation copy", "Proof of funds", "Research proposal / any portfolio (for any particular course)"
         ],
         bachelors: [
-            "Letters of Recommendation", "Entrance exam score cards – SAT / ACT", "Statement of Purpose", "English language proficiency scores", "Passport", "CV or Resume", "Mark sheets and pass certificates", "Application confirmation copy", "Essays", "Certificates for extra-curricular activities", "High school diploma or equivalent", "Proof of funds   "
+            "Letters of Recommendation", "Entrance exam score cards – SAT / ACT", "Statement of Purpose", "English language proficiency scores", "Passport", "Resume or Curriculum Vitae(CV)/Resume", "Mark sheets and pass certificates", "Application confirmation copy", "Essays", "Certificates for extra-curricular activities", "High school diploma or equivalent", "Proof of funds   "
         ],
         expense: {
             th: ["Study program", "Aproximate tution fees in USD"],
@@ -88,13 +91,13 @@ export const country = [
 
         ],
         masters: [
-            "Passport", "CV", "SOP", "Lor", "IELTS/German language", "Ug certificated", "12th certificate", "SSLC", "Scaned photo and signature"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS/German language", "Ug certificate", "12th certificate", "SSLC", "Scaned photo and signature"
         ],
         bachelors: [
-            "Passport", "CV", "SOP", "Lor", "IELTS/German language", "12th certificate", "SSLC", "Scaned photo and signature"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS/German language", "12th certificate", "SSLC", "Scaned photo and signature"
         ],
         expense: [
-            { title: ["Money support to your self"] },
+            { h: ["Money to support your self"] },
             {
                 content: "Germany costs €11,208 per year for a German study visa, equivalent to €934 per month. Students typically spend €410 monthly on housing, €198 per month on food and groceries, and €49 on public transportation. Health insurance, study materials, and miscellaneous expenses are also included in the monthly expenses."
             }
@@ -107,7 +110,7 @@ export const country = [
     },
     {
         country: "Ireland",
-        des: "invites you to experience the renowned warmth of Irish hospitality. From the moment you step onto our campus, you'll be embraced by the friendly spirit that defines Ireland. Discover a home away from home as you embark on an academic journey enveloped in the charm of Irish culture",
+        des: "Invites you to experience the renowned warmth of Irish hospitality. From the moment you step onto our campus, you'll be embraced by the friendly spirit that defines Ireland. Discover a home away from home as you embark on an academic journey enveloped in the charm of Irish culture.",
         postPermitOpportunity: [
             { title: "Bachelors at €10,000 per annum" },
             { content: "This suggests that the annual tuition fees for a bachelor's degree program are €10,000. This cost may vary depending on the university and the specific program." },
@@ -119,21 +122,10 @@ export const country = [
             { content: "This likely refers to the work restrictions placed on international students during their studies. Typically, international students are allowed to work part-time (up to 20 hours per week) during term time and full-time (up to 40 hours per week) during holidays or breaks." }
         ],
         highAcademicStandard: [
-            { h: "Wide Range of Courses" },
-            { content: "Ireland offers diverse programs in numerous universities." },
-            { h: "Innovation and Research Focus" },
-            { content: "Known for pioneering research and fostering innovation." },
-            { h: "Safety Priority" },
-            { content: "With low crime rates, Ireland ensures a secure study environment." },
-            { h: "Supportive Environment" },
-            { content: "Prioritizes individual and professional growth through comprehensive support services." },
-            { h: "Modern Democracy" },
-            { content: "Students benefit from Ireland's stable political environment and progressive values." },
-            { h: "Global Business Hub" },
-            { content: "Provides opportunities for exposure to diverse industries and international networking." },
+            { li: ["Plenty of courses and university choices", "Innovation and research", "Ireland is the safest place to study.", "Supports individual and professional growth", " A highly developed country with modern democracy", " Global Business Hub"] }
         ],
-        masters: ["Academic Transcripts of 10th and 12th class", "Copy of passport/visa (if available)", "Academic transcript", "Certificate of graduation", "Certificate of English – IELTS/TOEFL/PTE Test/Other", "Personal statement", "Reference letters", "CV (if applicable)"],
-        bachelors: ["Academic Transcripts of 10th and 12th class", "Copy of passport/visa (if available)", "Academic transcript", "Certificate of English – IELTS/TOEFL/PTE Test/Other", "Personal statement", "Reference letters", "CV (if applicable)"],
+        masters: ["Academic Transcripts of 10th and 12th class", "Copy of passport/visa (if available)", "Academic transcript", "Certificate of graduation", "Certificate of English – IELTS/TOEFL/PTE Test/Other", "Personal statement", "Reference letters", "Curriculum Vitae(CV)/Resume (if applicable)"],
+        bachelors: ["Academic Transcripts of 10th and 12th class", "Copy of passport/visa (if available)", "Academic transcript", "Certificate of English – IELTS/TOEFL/PTE Test/Other", "Personal statement", "Reference letters", "Curriculum Vitae(CV)/Resume (if applicable)"],
         expense: {
             th: ["Expense", "Average monthly cost"],
             td: [
@@ -171,7 +163,7 @@ export const country = [
     },
     {
         country: "Australia",
-        des: "Experience the vibrant cultural scene of Australia at Global University. From indigenous traditions to modern city life, students can explore diverse cultural aspects.Opportunities add a practical dimension to their studies, fostering well rounded cultural and professional development.",
+        des: "Experience the vibrant cultural scene of Australia at global university. From indigenous traditions to modern city life, students can explore diverse cultural aspects.Opportunities add a practical dimension to their studies, fostering well rounded cultural and professional development.",
         postPermitOpportunity: [
             {
                 h: "Temporary Graduate Visa Subclass 485 (Post-Study Work), [allows stay for 2-4 years]",
@@ -194,8 +186,8 @@ export const country = [
             { li: ["No application fee in a majority of universities", "Flexibility in terms of deadlines, universities ready to accept applications and financials closer to course start dates", "Lower entry requirements of universities with relatively higher international rankings", "No Visa interviews", "Quick visa outcomes", "GST is paid over and above commissions"] },
 
         ],
-        masters: ["Passport", "CV", "SOP", "2 Lor", "IELTS", "Packlog summury/No backlog certifiate", "All Ug certificates", "12th certificate", "SSLC", "Application fee"],
-        bachelors: ["Passport", "CV", "SOP", "2 Lor", "IELTS", "12th certificate", "SSLC", "Application fee"],
+        masters: ["Passport", "Curriculum Vitae(CV)/Resume", "SoP", "2 Lor", "IELTS", "Backlog summary/No backlog certificate", "All Ug certificates", "12th certificate", "SSLC", "Application fee"],
+        bachelors: ["Passport", "Curriculum Vitae(CV)/Resume", "SoP", "2 Lor", "IELTS", "12th certificate", "SSLC", "Application fee"],
         expense: {
             th: ["Type of Expense", "Costs"],
             td: [
@@ -260,10 +252,10 @@ export const country = [
 
         ],
         masters: [
-            "Completely Filled Application Form.", "GRE/GMAT/TOEFL/IELTS/PTE Exam Score Xerox.", "Academic Certificates (SSC, Inter, Bachelor’s,etc.).", "Photo Copies of first and last pages of your passport.", "Job Experience Certificates (If available).", "Study Certificates.", "Passport Size Photographs.", "Birth Certificate.", "Any Other Documents (Extra Curricular Activities)."
+            "Completely Filled Application Form", "GRE/GMAT/TOEFL/IELTS/PTE Exam Score Xerox", "Academic Certificates (SSC, Inter, Bachelor’s,etc)", "Photo Copies of first and last pages of your passport", "Job Experience Certificates (If available)", "Study Certificates", "Passport Size Photographs", "Birth Certificate", "Any Other Documents (Extra Curricular Activities)"
         ],
         bachelors: [
-            "Academic Transcripts of 10th and 12th class", "Completely Filled Application Form.", "GRE/GMAT/TOEFL/IELTS/PTE Exam Score Xerox.", "Photo Copies of first and last pages of your passport.", "Job Experience Certificates (If available).", "Study Certificates.", "Passport Size Photographs.", "Birth Certificate.", "Any Other Documents (Extra Curricular Activities)."
+            "Academic Transcripts of 10th and 12th class", "Completely Filled Application Form", "GRE/GMAT/TOEFL/IELTS/PTE Exam Score Xerox", "Photo Copies of first and last pages of your passport", "Job Experience Certificates (If available)", "Study Certificates", "Passport Size Photographs", "Birth Certificate", "Any Other Documents (Extra Curricular Activities)"
         ],
         expense: {
             th: ["Expenses", "Weekly average cost in NZ$"],
@@ -296,10 +288,10 @@ export const country = [
             { content: "International students with a residence permit can work in Finland if it is relevant to their course. During the program, a student can work 25 hours per week and full-time during summer breaks." },
         ],
         masters: [
-            "Passport", "CV", "SOP", "Lor", "IELTS", "Ug certificated", "12th certificate", "SSLC"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS", "Ug certificate", "12th certificate", "SSLC"
         ],
         bachelors: [
-            "Passport", "CV", "SOP", "Lor", "IELTS", "12th certificate", "SSLC"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS", "12th certificate", "SSLC"
         ],
 
         highAcademicStandard: [
@@ -349,10 +341,12 @@ export const country = [
     },
     {
         country: "Sweden",
-        des: "Dive into the heart of Swedish customs as a student at Global University. From fika breaks to Midsummer celebrations, our campus encourages active participation in local traditions, providing an authentic understanding of Sweden's cultural identity. Global University offers more than education; it's an immersion into Swedish life.",
+        des: "Dive into the heart of Swedish customs as a student at global university. From fika breaks to Midsummer celebrations, our campus encourages active participation in local traditions, providing an authentic understanding of Sweden's cultural identity. global university offers more than education; it's an immersion into Swedish life.",
         highAcademicStandard: [
+            { h: "Here are some of the highlights you will benefit from if you have the intention to study in Sweden" },
             {
-                li: ["Here are some of the highlights you will benefit from if you have the intention to study in Sweden"
+
+                li: [
                     , "Language of instruction: English, Swedish",
                     "Average cost of living: SEK 700 – SEK 1,500 per month",
                     "The average price of study: SEK 80,000 per year",
@@ -370,9 +364,9 @@ export const country = [
             content: "In Sweden, a minimum residence permit and work permit are required for university or college studies, requiring 30 credits or one semester of postgraduate studies."
         }],
         masters: [
-            "Passport", "CV", "SOP", "Lor", "IELTS/Pte/Duolingo", "Ug certificated", "12th Certificate", "SSLC"],
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS/Pte/Duolingo", "Ug certificate", "12th Certificate", "SSLC"],
         bachelors: [
-            "Passport", "CV", "SOP", "Lor", "IELTS/Pte/Duolingo", , "12th Certificate", "SSLC"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "IELTS/Pte/Duolingo", , "12th Certificate", "SSLC"
         ],
         expense: {
             th: ["Loan Parameters ", "Details"],
@@ -400,7 +394,7 @@ export const country = [
     },
     {
         country: "Canada",
-        des: "Dedicated to preparing students for success on the world stage. Enhance your academic pursuits with practical professional experiences through internships and networking opportunities in Canada's diverse industries. Your time at Global University is an investment in both education and a global career.",
+        des: "Dedicated to preparing students for success on the world stage. Enhance your academic pursuits with practical professional experiences through internships and networking opportunities in Canada's diverse industries. Your time at global university is an investment in both education and a global career.",
         postPermitOpportunity: [
             { title: "Canada Work Permit Requirements " },
             { li: ["Below 45 years of age", "Skilled work experience in a NOC category of TEER Level 0, 1, 2, or 3", "Valid job offer in Canada", "Employment contract", "Copy of the LMIA ", "LMIA number Canada Work Permit Eligibility "] },
@@ -410,8 +404,8 @@ export const country = [
         highAcademicStandard: [
             { title: "Canada is one of the world's top-developed countries. It has become the most preferred study destination in the past ten years. Many universities listed in QS worldwide rankings are located in Canada.The following are the top six benefits of studying in Canada." },
             { li: ["Affordable Education", " Quality Educational Curriculum", "Innovative Training and Research Opportunities", " Best Immigration Possibilities", " International Exposure", " International students can work while studying"] }
-        ], bachelors: ["Passport", "CV", "SOP", "2 Lor ", "Application fee", "12th certificate", "SSLC", "Packlog summury/No backlog certifiate"],
-        masters: ["Passport", "CV", "SOP", "Ug all certificates", "Application fee", "12th certificate", "SSLC", "Packlog summury/No backlog certifiate"],
+        ], bachelors: ["Passport", "Curriculum Vitae(CV)/Resume", "SoP", "2 Lor ", "Application fee", "12th certificate", "SSLC", "Backlog summary/No backlog certificate"],
+        masters: ["Passport", "Curriculum Vitae(CV)/Resume", "SoP", "All UG certificates", "Application fee", "12th certificate", "SSLC", "Backlog summary/No backlog certificate"],
         expense: {
             th: ["Higher Study Options", "Average Tuition Fee per Year", "Living Expenses for 1 Year/Proof of funds for one year"],
             td: [
@@ -438,7 +432,7 @@ export const country = [
     },
     {
         country: "France",
-        des: "The connections made in France extend far beyond academic pursuits. Experience the camaraderie of fellow students as you navigate the cultural wonders together.It's not just an academic institution; it's a community where lifelong connections are forged in the heart of French sophistication",
+        des: "The connections made in France extend far beyond academic pursuits. Experience the camaraderie of fellow students as you navigate the cultural wonders together. It's not just an academic institution; it's a community where lifelong connections are forged in the heart of French sophistication.",
         postPermitOpportunity: [
             { title: "Working during studies" },
             { content: " International students on a student visa in France are allowed to work for a total of 964 hours per year or 60% of the regular working hours in France. " },
@@ -446,13 +440,13 @@ export const country = [
             { content: "Bachelor degree holders can only stay in France after completing their studies if they have a work visa where as students studying for Master's degrees in France can apply for and receive a temporary residency permit – APS (Autorisation Provisioire de Séjour) for 24 months. If you have a master’s, PhD, or post- graduate degree from a French university, you can acquire a two - year Schengen visa extension. If a student can find work that pays more than 1.5 times the minimum salary, he or she is qualified to apply for a Work Permit, which is the first step toward obtaining a European Union Blue Card(Permanent Residence).  " }
         ],
         highAcademicStandard: [
-            { li: ["Universities in France provide quality higher education tailored to the needs of the students and offer exceptional R&D opportunities.", "France has an ambiance favorable for young Entrepreneurs and innovation", "Outstanding career prospects with options for Post Study Visa", "The Top 20 Universities in France are ranked and recognized by QS in the global top 500 list", "The Government of France subsidizes a vast share of the actual tuition costs, and thus, Tuition fees are low at Public Universities", "An analogous Grandes Ecoles system that is on par with a Masters degree"] }
+            { li: ["Universities in France provide quality higher education tailored to the needs of the students and offer exceptional R&D opportunities.", "France has an ambiance favorable for young entrepreneurs and innovation", "Outstanding career prospects with options for post study visa", "The Top 20 Universities in France are ranked and recognized by QS in the global top 500 list", "The Government of France subsidizes a vast share of the actual tuition costs, and thus, tuition fees are low at Public Universities", "An analogous Grandes Ecoles system that is on par with a master's degree"] }
         ],
         bachelors: [
-            "Passport", "CV", "SOP", "Lor", "12th certificate", "SSLC", "Experience certificate if applicable", "MOI/IELTS", "Scanned signature", "Passport size photo"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "Lor", "12th certificate", "SSLC", "Experience certificate if applicable", "MOI/IELTS", "Scanned signature", "Passport size photo"
         ],
         masters: [
-            "Passport", "CV", "SOP", "Ug all certificates", "Lor", "12th certificate", "SSLC", "Experience certificate if applicable", "MOI/IELTS", "Scanned signature", "Passport size photo"
+            "Passport", "Curriculum Vitae(CV)/Resume", "SoP", "All UG certificates", "Lor", "12th certificate", "SSLC", "Experience certificate if applicable", "MOI/IELTS", "Scanned signature", "Passport size photo"
         ]
         , university: ["Psl Universite Paris", "Institut Polytechnique De Paris",
             "Sorbonne University", "Université Paris-Saclay",
@@ -475,18 +469,18 @@ export const country = [
 export const courses = [
     {
         courseName: "Health Care",
-        dis: " Explore the dynamic field of health care, delving into areas like nursing, public health, and medical research to contribute to the well- being of individuals and communities",
+        dis: "Explore the dynamic field of health care, delving into areas like nursing, public health, and medical research to contribute to the well-being of individuals and communities.",
         img: "healthCare.jpg"
     },
     {
         courseName: "Business and Management",
-        dis: " Master the art of strategic decision-making, organizational leadership, and effective management strategies to thrive in the ever-evolving global business landscape",
+        dis: " Master the art of strategic decision-making, organizational leadership, and effective management strategies to thrive in the ever-evolving global business landscape.",
         img: "Business management.jpg"
 
     },
     {
         courseName: "Science",
-        dis: " Dive into the world of scientific discovery, exploring disciplines such as biology, chemistry, physics, and environmental science to uncover the mysteries of the natural world.",
+        dis: "Dive into the world of scientific discovery, exploring disciplines such as biology, chemistry, physics, and environmental science to uncover the mysteries of the natural world.",
         img: "Science.jpg"
     },
     {

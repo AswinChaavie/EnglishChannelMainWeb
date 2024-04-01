@@ -25,6 +25,7 @@
   color: #ffffffe8;
   border: none;
   font-size: 19px;
+  letter-spacing: 1px;
 }
 
 .SelectionButtonField {
@@ -40,7 +41,8 @@
   margin-top: 0.5px;
   font-size: 19px;
   border-radius: 40px 40px 00px 00px;
-
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .SelectionButtonDiv {

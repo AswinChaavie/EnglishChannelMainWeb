@@ -58,3 +58,21 @@
     font-size: 15px;
     color: black;
 }
+
+.VlogWebNAv {
+    display: block;
+}
+
+.VlogMobNav {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .VlogWebNAv {
+        display: none;
+    }
+
+    .VlogMobNav {
+        display: block;
+    }
+}

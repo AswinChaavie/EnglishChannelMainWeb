@@ -8,6 +8,7 @@ import axios from 'axios'
 import { Loader } from '../../../Components/Loader/Loader'
 import { api } from '../../../config'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { MobileNavbar } from '../../Mobile/MobileNavbar/MobileNavbar'
 export const BlogSec = () => {
     const [blogs, setblogs] = useState([])
     useEffect(() => {
@@ -18,9 +19,14 @@ export const BlogSec = () => {
         })
     }, [])
 
-    return (    
+    return (
         <>
-            <Navbar countrie={true} />
+            <div className='VlogWebNAv'>
+                <Navbar countrie={true} />
+            </div>
+            <div className='VlogMobNav'>
+                <MobileNavbar countrie={true} />
+            </div>
             {blogs.length > 0 ? <>
                 <div className='BlogSecAlign'>
                     <div className='BlogSecSetText'>

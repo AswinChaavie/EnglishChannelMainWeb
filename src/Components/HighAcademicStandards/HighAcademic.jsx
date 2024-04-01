@@ -18,7 +18,7 @@ export const HighAcademic = ({ data }) => {
                 {data?.data?.map(highAc =>
                     <>
                         {highAc?.title ?
-                            <h3 data-aos="fade-right" className='PostPermitHtag'>{highAc.title}</h3>
+                            <h4 data-aos="fade-right" className='PostPermitHtag'>{highAc.title}</h4>
                             : " "
                         }
                         {
